@@ -3,20 +3,29 @@ main:
   - title: "About Me"
     url: "/#about-me"
 
-  - title: "News"
-    url: "/#-news"
+  - title: "Educations"
+    url: "/#-educations"
 
-  - title: "Publications"
-    url: "/#-publications"
+  - title: "Coursework"
+    url: "/#-relevant-coursework"
+
+  - title: "Experiences"
+    url: "/#-experiences"
+
+ - title: "Projects"
+    url: "/#-projects"
 
   - title: "Honors and Awards"
     url: "/#-honors-and-awards"
 
-  - title: "Educations"
-    url: "/#-educations"
+  - title: "Skills"
+    url: "/#-Technical-skills"
 
-  - title: "Invited Talks"
-    url: "/#-invited-talks"
+  - title: "Leadership"
+    url: "/#-leadership-/-Extracurricular"
 
   - title: "Internships"
     url: "/#-internships"
+
+  - title: "Publications"
+    url: "/#-publicationss"

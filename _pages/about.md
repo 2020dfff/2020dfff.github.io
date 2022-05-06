@@ -34,7 +34,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 
 
-# 🔥 Basic Information
+# 🔥 About Me
 
 > 800 Dongchuan road, Minhang, Shanghai
 >
@@ -46,7 +46,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 
 
-📖 Education
+📖 Educations
 =========
 
 -   ---------------------------------------------------- -------------------------
@@ -68,31 +68,29 @@ My research interest includes neural machine translation and computer vision. I 
 | **Data Structures**   | **Principles of Database** | **Computer Network**      | **Cryptography**     |
 | --------------------- | -------------------------- | ------------------------- | -------------------- |
 | **Basic Programming** | **Compiler Principles**    | **Computer Organization** | **Windows Security** |
-| **ICS - (CSAPP)**     | **Software engineering**   | **Data Mining**           | **Operating System** |
+| **ICS - 1 (CSAPP)**   | **Software engineering**   | **Data Mining**           | **Operating System** |
 
 
 
-💻 Experience
+💻 Experiences
 ==========
 
 -   ------------------------------------------------ -------------------------
 
   **SJTU Machine Vision and Intelligence Group**     **Dec 2021 -- Present**
   ***Computer Vision Intern***                               *Prof: Cewu Lu*
------------------------------------------------- -------------------------
 
--    Start from self studying Stanford's cs231n online course, solving the curriculum lab and comparing different models in **computer vision field**.
-    
+- Start from self studying Stanford's cs231n online course, solving the curriculum lab and comparing different models in **computer vision field**.
+
 -    The main research direction is **human pose.**
 
--   ------------------------------------------------- --------------------------
+***
 
-  **CITtrip : Student Research Training Program**     **Mar 2021 -- Mar 2022**
-  ***Information Security Researcher***                        *Prof: Jie Guo*
+**CITtrip : Student Research Training Program**     **Mar 2021 -- Mar 2022**
+***Information Security Researcher***                        *Prof: Jie Guo*
 
-------------------------------------------------- --------------------------
+- Use BERT, LDA and other models in the **NLP field** to help analyze harmful speeches on the Internet, realize measurement innovation.
 
--    Use BERT, LDA and other models in the **NLP field** to help analyze harmful speeches on the Internet, realize measurement innovation.
 -    Define **anonymous** Internet users, establish relationship networks, and identify key users.
 
 
@@ -100,27 +98,25 @@ My research interest includes neural machine translation and computer vision. I 
 ⌨ Projects
 ========
 
--   ------------------------------------------------------------------ --------------
+ **Simple Network Sniffer: EzSniffer** $|$ *Python, Scapy, PyQt5*     **Nov 2021**
 
-  **Simple Network Sniffer: EzSniffer** $|$ *Python, Scapy, PyQt5*     **Nov 2021**
------------------------------------------------------------------- --------------
+***
 
--    A simple network sniffer developed based on **linux platform** and **python** language uses **PyQt5** for interface design.
+- A simple network sniffer developed based on **linux platform** and **python** language uses **PyQt5** for interface design.
+
 -    Main functions include: **capturing and analyzing** the local ethernet selected by the user, realizing packet filtering, searching, IP packet fragmentation and reorganization, and file storage.
 -    It contains as many types of messages as possible (ICMP, UDP, TCP, etc.), with good **usability and readability.**
 
--   -------------------------------------------------------------------------------------- --------------
+***
 
  **Campus Carpooling System: Huajiao Carpooling** $|$ *Django, Node.js, React, MySQL*     **May 2021**
 
--------------------------------------------------------------------------------------- --------------
-
--    Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of
-     **agile development**, a total of three rounds of iterations, and finally deployed the website.
+- Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of
+  **agile development**, a total of three rounds of iterations, and finally deployed the website.
 
 
 
-🏆 Awards
+🏆 Honors and Awards
 ======
 
 -   ---------------------------------------------------------------- ------------------------
@@ -211,6 +207,18 @@ Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, 
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
+
+
+
+
+# 💬 Invited Talks
+
+
+
+# 💻 Internships
+
+
+
 # 📝 Publications 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
@@ -221,7 +229,5 @@ Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, 
 
 
 
-# 💬 Invited Talks
 
-
-# 💻 Internships
+# 
