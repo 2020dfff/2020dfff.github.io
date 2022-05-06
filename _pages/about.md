@@ -56,3 +56,191 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 💻 Internships
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+
+
+
+
+
+
+
+
+
+[Yang Fei]{.smallcaps}\
+800 Dongchuan road, Minhang, Shanghai\
+ 180-1515-8812  
+[ [2019dfff\@sjtu.edu.cn]{.underline}](mailto:2019dfff@sjtu.edu.cn)  
+[ [github.com/2020dfff]{.underline}](https://github.com/)
+
+Education
+=========
+
+-   ---------------------------------------------------- -------------------------
+
+      **Shanghai Jiaotong University**                       **Sep 2019 -- Present**
+      *Bachelor of Science in **Information Security** *                  *Shanghai*
+      ---------------------------------------------------- -------------------------
+
+- **Academic and English proficiency:**
+
+  **GPA:** 3.37/4.3    **Major GPA:** 3.49/4.3    **TOEFL:** 95
+
+Relevant Coursework
+===================
+
+4
+
+-   Data Structures
+
+-   Basic Programming
+
+-   ICS - (CSAPP)
+
+-   Principles of Database
+
+-   Compiler Principles
+
+-   Software engineering
+
+-   Computer Network
+
+-   Computer Organization
+
+-   Data Mining
+
+-   Cryptography
+
+-   Windows Security
+
+-   Operating System
+
+Experience
+==========
+
+-   ------------------------------------------------ -------------------------
+
+      **SJTU Machine Vision and Intelligence Group**     **Dec 2021 -- Present**
+      ***Computer Vision Intern***                               *Prof: Cewu Lu*
+      ------------------------------------------------ -------------------------
+    
+    -    Start from self studying Stanford's cs231n online course,
+        solving the curriculum lab and comparing different models in
+        **computer vision field**.
+    
+    -    The main research direction is **human pose.**
+
+-   ------------------------------------------------- --------------------------
+
+      **CITtrip : Student Research Training Program**     **Mar 2021 -- Mar 2022**
+      ***Information Security Researcher***                        *Prof: Jie Guo*
+      ------------------------------------------------- --------------------------
+    
+    -    Use BERT, LDA and other models in the **NLP field** to help
+        analyze harmful speeches on the Internet, realize measurement
+        innovation.
+    
+    -    Define **anonymous** Internet users, establish relationship
+        networks, and identify key users.
+
+Projects
+========
+
+-   ------------------------------------------------------------------ --------------
+
+      **Simple Network Sniffer: EzSniffer** $|$ *Python, Scapy, PyQt5*     **Nov 2021**
+      ------------------------------------------------------------------ --------------
+    
+    -    A simple network sniffer developed based on **linux platform**
+        and **python** language uses **PyQt5** for interface design.
+    
+    -    Main functions include: **capturing and analyzing** the local
+        ethernet selected by the user, realizing packet filtering,
+        searching, IP packet fragmentation and reorganization, and file
+        storage.
+    
+    -    It contains as many types of messages as possible (ICMP, UDP,
+        TCP, etc.), with good **usability and readability.**
+
+-   -------------------------------------------------------------------------------------- --------------
+
+      **Campus Carpooling System: Huajiao Carpooling** $|$ *Django, Node.js, React, MySQL*     **May 2021**
+      -------------------------------------------------------------------------------------- --------------
+    
+    -    Realize the **demand of carpooling for students** in partial
+        campus and build a usable website.
+    
+    -    Carried out this group cooperation project in the form of
+        **agile development**, a total of three rounds of iterations,
+        and finally deployed the website.
+
+Awards
+======
+
+-   ---------------------------------------------------------------- ------------------------
+
+      Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, Nov 2020**
+      ---------------------------------------------------------------- ------------------------
+
+-   --------------------------------------------------- --------------
+
+      Mathematical Contest in Modeling, **Meritorious**     **Apr 2021**
+      --------------------------------------------------- --------------
+
+-   --------------------------------------------------------- --------------
+
+      Mathematical Contest in Modeling, **Honorable Mention**     **Apr 2020**
+      --------------------------------------------------------- --------------
+
+-   --------------- --------------
+
+      Merit Student     **Apr 2020**
+      --------------- --------------
+
+Technical Skills
+================
+
+**Programming Languages**: Python, C/C++, SQL, MATLAB\...\
+**Security Related Skills**: Cryptography, Penetration test, Misc/Pwn\
+**Technologies/Frameworks**: Linux, Git, Latex, Office\
+**Other Interest**: Basketball, Piano, Hiking\
+
+Leadership / Extracurricular
+============================
+
+-   -------------------------------------------- --------------------------
+
+      **College Student Work Office, President**     **Fall 2019 -- Present**
+                                                   
+      -------------------------------------------- --------------------------
+    
+    -    Organize and plan the training course of ideal and faith
+        education in the college, with a total of four sessions, more
+        than **2000 trainees**, and undertake **six forums**.
+    
+    -    Led chapter of **50+** members to work towards goals that
+        improve and promote community service, academics, and unity.
+
+-   ------------------------ ----------------------------
+
+      **Club Unions, Cadre**     **Fall 2019 -- Fall 2020**
+                               
+      ------------------------ ----------------------------
+    
+    -    Participate in undertaking **large-scale cultural and sports
+        activities** on campus, such as \"Qiyuan Loy Krathong Festival,
+        Club Recruitment, Student Festival\" and other related
+        activities.
+    
+    -    The cumulative readings of articles related to the event
+        **exceeded one million**.
+
+-   -------------------------------- ---------------
+
+      **Vaccination Site Volunteer**     **Fall 2021**
+                                       
+      -------------------------------- ---------------
+
+-   ----------------------------------------------- ---------------
+
+      **Shanghai International Marathon Volunteer**     **Fall 2020**
+                                                      
+      ----------------------------------------------- ---------------
