@@ -35,7 +35,7 @@ My research interests include cyber-security, internet protocol and the intersec
 
 I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.google.de/citations?user=QZVQEWAAAAAJ&hl=zh-CN&oi=ao) at [MVIG LAB](https://mvig.sjtu.edu.cn/), and a prospective participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/).
 
-### My Basic Information
+## My Basic Information
 
 > 800 Dongchuan Road, Minhang, Shanghai
 >
@@ -54,8 +54,9 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 -   ---------------------------------------------------- -------------------------
 
-> **Shanghai Jiaotong University**                                                                  **Sep 2019 -- Jun 2023(expected)**
->  Bachelor of Science in **Information Security**                                                                                   *Shanghai*
+> ### **Shanghai Jiaotong University**   📅 **[Sep 2019 -- Jun 2023(expected)]**
+>
+>  Bachelor of Science in **Information Security**
 
 ---------------------------------------------------- -------------------------
 
@@ -73,12 +74,12 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 -   ---------------------------------------------------- -------------------------
 
-> **Huaiyin High School**                                                                                                   **Sep 2016 -- Jun 2019**
+> ### **Huaiyin High School**   📅 **[Sep 2016 -- Jun 2019]**
 
-| 2019-GaoKao : 415/480 (top 0.01%) | Math: 177/200 | Physics/Chemistry: A+ | English: 110/120 |
-| --------------------------------- | ------------- | --------------------- | ---------------- |
-
-
+- **2019-GaoKao : 415/480 (top 0.01%)**
+  - Math: 177/200
+  - Physics/Chemistry: A+ 
+  - English: 110/120
 
 
 
@@ -99,8 +100,13 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 -   ------------------------------------------------ -------------------------
 
-  **SJTU Machine Vision and Intelligence Group**     **Dec 2021 -- Present**
-  ***Computer Vision Intern***                               *Prof: Cewu Lu*
+> ### **SJTU Machine Vision and Intelligence Group** 
+>
+> > **Dec 2021 -- Present**
+>
+> > ***Computer Vision Intern***
+> >
+> > ***Prof: Cewu Lu***
 
 - Start from self studying Stanford's cs231n online course, solving the curriculum lab and comparing different models in **computer vision field**.
 
@@ -108,8 +114,13 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 ***
 
-**CITtrip : Student Research Training Program**     **Mar 2021 -- Mar 2022**
-***Information Security Researcher***                        *Prof: Jie Guo*
+> ### **CITtrip : Student Research Training Program**     
+>
+> > **Mar 2021 -- Mar 2022**
+>
+> > ***Information Security Researcher***
+> >
+> > ***Prof: Jie Guo***
 
 - Use BERT, LDA and other models in the **NLP field** to help analyze harmful speeches on the Internet, realize measurement innovation.
 
@@ -122,7 +133,11 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 ⌨ Projects
 ========
 
- **Simple Network Sniffer: EzSniffer**        *Python, Scapy, PyQt5*         **Nov 2021**
+###  **Simple Network Sniffer: EzSniffer**        
+
+> ***Python, Scapy, PyQt5***       
+>
+> **Nov 2021**
 
 ***
 
@@ -133,7 +148,11 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 ***
 
- **Campus Carpooling System: Huajiao Carpooling**        *Django, Node.js, React, MySQL*         **May 2021**
+###  **Campus Carpooling System: Huajiao Carpooling**        
+
+> ***Django, Node.js, React, MySQL*** 
+>
+> **May 2021**
 
 - Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of
   **agile development**, a total of three rounds of iterations, and finally deployed the website.
@@ -145,25 +164,10 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 🏆 Honors and Awards
 ======
 
--   ---------------------------------------------------------------- ------------------------
-
-Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, Nov 2020**
-
--   --------------------------------------------------- --------------
-
- Mathematical Contest in Modeling, **Meritorious**     **Apr 2021**
-
--   --------------------------------------------------------- --------------
-
- Mathematical Contest in Modeling, **Honorable Mention**     **Apr 2020**
-
--   --------------- --------------
-
-  Merit Student     **Apr 2020**
-
---------------- --------------
-
-
+- Outstanding Undergraduate Scholarship of SJTU; **2×recipient**, Nov 2021, Nov 2020
+- Mathematical Contest in Modeling, **Meritorious**, Apr 2021
+- Mathematical Contest in Modeling, **Honorable Mention**, Apr 2020
+- Merit Student, Apr 2020
 
 
 
@@ -196,37 +200,18 @@ Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, 
 
 -   -------------------------------------------- --------------------------
 
-  **College Student Work Office, President**     **Fall 2019 -- Present**                           
--------------------------------------------- --------------------------
+- **College Student Work Office, President**, **Fall 2019 -- Present**          
+  - Organize and plan the training course of ideal and faith education in the college, with a total of four sessions, more than **2000 trainees**, and undertake **six forums**.
+  - Led chapter of **50+** members to work towards goals that improve and promote community service, academics, and unity.
 
--    Organize and plan the training course of ideal and faith
-    education in the college, with a total of four sessions, more
-    than **2000 trainees**, and undertake **six forums**.
+- **Club Unions, Cadre**, **Fall 2019 -- Fall 2020**   
+  - Participate in undertaking **large-scale cultural and sports activities** on campus, such as \"Qiyuan Loy Krathong Festival, Club Recruitment, Student Festival\" and other related activities.
+  - The cumulative readings of articles related to the event **exceeded one million**.
 
--    Led chapter of **50+** members to work towards goals that
-    improve and promote community service, academics, and unity.
-
--   ------------------------ ----------------------------
-
-**Club Unions, Cadre**     **Fall 2019 -- Fall 2020**   
-
------------------------- ----------------------------
-
--    Participate in undertaking **large-scale cultural and sports activities** on campus, such as \"Qiyuan Loy Krathong Festival, Club Recruitment, Student Festival\" and other related activities.
-    
--    The cumulative readings of articles related to the event **exceeded one million**.
-
--   -------------------------------- ---------------
-
-  **Vaccination Site Volunteer**     **Fall 2021** 
-
--------------------------------- ---------------
-
- **Shanghai International Marathon Volunteer**     **Fall 2020**              
+- **Vaccination Site Volunteer**, **Fall 2021** 
+- **Shanghai International Marathon Volunteer**, **Fall 2020**              
 
 ----------------------------------------------- ---------------
-
-
 
 
 
