@@ -17,32 +17,35 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-[TOC]
-
-I graduated from [Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/main.htm), Zhejiang University (浙江大学竺可桢学院) with a bachelor’s degree and from the Department of Computer Science and Technology, Zhejiang University (浙江大学计算机科学与技术学院) with a master’s degree, advised by [Zhao Zhou (赵洲)](https://person.zju.edu.cn/zhaozhou). I also collaborate with [Xu Tan (谭旭)](https://www.microsoft.com/en-us/research/people/xuta/), [Tao Qin (秦涛)](https://www.microsoft.com/en-us/research/people/taoqin/) and [Tie-yan Liu (刘铁岩)](https://www.microsoft.com/en-us/research/people/tyliu/) from [Microsoft Research Asia](https://www.microsoft.com/en-us/research/group/machine-learning-research-group/) closely.
-
-I won the [Baidu Scholarship](https://baike.baidu.com/item/百度奖学金/9929412) (10 candidates worldwide each year) and ByteDance Scholars Program (10 candidates worldwide each year) in 2020 and was selected as one of [the top 100 AI Chinese new stars](https://mp.weixin.qq.com/s?__biz=MzA4NzQ5MTA2NA==&mid=2653639431&idx=1&sn=25b6368c1954419b9090840347d9a27d&chksm=8be75b90bc90d286a5af3ef8e610e822d705dc3cf4382b45e3f14489f3e7ec4fd8c95ed0eceb&mpshare=1&scene=2&srcid=0511LMlj9Qv9DeIZAjMjYAU9&sharer_sharetime=1620731348139&sharer_shareid=631c113940cb81f34895aa25ab14422a#rd) and AI Chinese New Star Outstanding Scholar (10 candidates worldwide each year).
-
-My research interest includes speech synthesis, neural machine translation and automatic music generation. I have published more than 20 papers at the top international AI conferences such as NeurIPS, ICML, ICLR, KDD.
-
-To promote the communication among the Chinese ML & NLP community, we (along with other 11 young scholars worldwide) founded the [MLNLP community](https://space.bilibili.com/168887299) in 2021. I am honored to be one of the chairs of the MLNLP committee.
-
-If you like the template of this homepage, welcome to star and fork my open-sourced template version.
-
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
 
 
 
 # 🔥 About Me
 
-> 800 Dongchuan road, Minhang, Shanghai
+Welcome to my personal page! 
+
+My name is Yang Fei (费扬), a junior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Computer Science. Prior to that, I graduated my high at [Huaiyin High School]([欢迎光临江苏省淮阴中学！ (huaizhong.com.cn)](http://www.huaizhong.com.cn/index.aspx)) with honor.
+
+I'm always curious about emerging electronics and keen to explore every link from programming to hardware. I hope to be a good computer security researcher, or an industry pioneer driving technological innovation.
+
+I won the Outstanding Undergraduate Scholarship of SJTU twice in 2020 & 2021 (Top 20% in SJTU), and won Meritorious Award in 2021 MCM. I was selected as Merit Student in my sophomore year.
+
+My research interests include cyber-security, internet protocol and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
+
+I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.google.de/citations?user=QZVQEWAAAAAJ&hl=zh-CN&oi=ao) at [MVIG LAB](https://mvig.sjtu.edu.cn/), and a prospective participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/).
+
+### My Basic Information
+
+> 800 Dongchuan Road, Minhang, Shanghai
 >
 >  180-1515-8812 
 >
-> [ <u>[2019dfff\@sjtu.edu.cn]</u>](mailto:2019dfff@sjtu.edu.cn) 
+> [ <u>[2019dfff@sjtu.edu.cn]</u>](mailto:2019dfff@sjtu.edu.cn) 
 >
 > [ <u>[github.com/2020dfff]</u>](https://github.com/)
+
+
 
 
 
@@ -51,14 +54,31 @@ My research interest includes neural machine translation and computer vision. I 
 
 -   ---------------------------------------------------- -------------------------
 
- **Shanghai Jiaotong University**                       **Sep 2019 -- Present**
-  *Bachelor of Science in **Information Security** *                  *Shanghai*
+> **Shanghai Jiaotong University**                                                                  **Sep 2019 -- Jun 2023(expected)**
+>  Bachelor of Science in **Information Security**                                                                                   *Shanghai*
 
 ---------------------------------------------------- -------------------------
 
-- **Academic and English proficiency:**
+- **Academic Grades:**
 
-  **GPA:** 3.37/4.3    **Major GPA:** 3.49/4.3    **TOEFL:** 95
+  **GPA:** 83/100    **Major GPA:** 3.49/4.3
+  
+- **A courses:**  Modern Number Theory, Information Security Innovation, Physics and 17 others.
+
+- **English proficiency:**
+
+  **TOEFL:** 95
+
+
+
+-   ---------------------------------------------------- -------------------------
+
+> **Huaiyin High School**                                                                                                   **Sep 2016 -- Jun 2019**
+
+| 2019-GaoKao : 415/480 (top 0.01%) | Math: 177/200 | Physics/Chemistry: A+ | English: 110/120 |
+| --------------------------------- | ------------- | --------------------- | ---------------- |
+
+
 
 
 
@@ -69,6 +89,8 @@ My research interest includes neural machine translation and computer vision. I 
 | --------------------- | -------------------------- | ------------------------- | -------------------- |
 | **Basic Programming** | **Compiler Principles**    | **Computer Organization** | **Windows Security** |
 | **ICS - 1 (CSAPP)**   | **Software engineering**   | **Data Mining**           | **Operating System** |
+
+
 
 
 
@@ -95,10 +117,12 @@ My research interest includes neural machine translation and computer vision. I 
 
 
 
+
+
 ⌨ Projects
 ========
 
- **Simple Network Sniffer: EzSniffer** $|$ *Python, Scapy, PyQt5*     **Nov 2021**
+ **Simple Network Sniffer: EzSniffer**        *Python, Scapy, PyQt5*         **Nov 2021**
 
 ***
 
@@ -109,10 +133,12 @@ My research interest includes neural machine translation and computer vision. I 
 
 ***
 
- **Campus Carpooling System: Huajiao Carpooling** $|$ *Django, Node.js, React, MySQL*     **May 2021**
+ **Campus Carpooling System: Huajiao Carpooling**        *Django, Node.js, React, MySQL*         **May 2021**
 
 - Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of
   **agile development**, a total of three rounds of iterations, and finally deployed the website.
+
+
 
 
 
@@ -139,15 +165,29 @@ Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, 
 
 
 
+
+
 ✨ Technical Skills
 ================
 
 ***
 
-**Programming Languages**: Python, C/C++, SQL, MATLAB\...
-**Security Related Skills**: Cryptography, Penetration test, Misc/Pwn
-**Technologies/Frameworks**: Linux, Git, Latex, Office
-**Other Interest**: Basketball, Piano, Hiking
+- **Programming Languages**: 
+  - Python, C/C++, Java, JavaScript, Verilog HDL, SQL, MATLAB\...
+- **Security Related Skills**: 
+  - Cryptography, Penetration test, Misc/Pwn
+- **Script Tools/Text Editor/Management Tools:**
+  - Shell, Vim, Git, Latex, Office
+- **Language:**
+  - Mandarin (Native)
+  - English (TOEFL iBT: 95)
+  - French (Beginner)
+- **Media Processing:**
+  - Adobe PR, Adobe PS, Adobe Lightroom
+- **Other Interest**: 
+  - Basketball, Piano, Hiking
+
+
 
 
 
