@@ -17,7 +17,17 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+
+
+I graduated from [Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/main.htm), Zhejiang University (浙江大学竺可桢学院) with a bachelor’s degree and from the Department of Computer Science and Technology, Zhejiang University (浙江大学计算机科学与技术学院) with a master’s degree, advised by [Zhao Zhou (赵洲)](https://person.zju.edu.cn/zhaozhou). I also collaborate with [Xu Tan (谭旭)](https://www.microsoft.com/en-us/research/people/xuta/), [Tao Qin (秦涛)](https://www.microsoft.com/en-us/research/people/taoqin/) and [Tie-yan Liu (刘铁岩)](https://www.microsoft.com/en-us/research/people/tyliu/) from [Microsoft Research Asia](https://www.microsoft.com/en-us/research/group/machine-learning-research-group/) closely.
+
+I won the [Baidu Scholarship](https://baike.baidu.com/item/百度奖学金/9929412) (10 candidates worldwide each year) and ByteDance Scholars Program (10 candidates worldwide each year) in 2020 and was selected as one of [the top 100 AI Chinese new stars](https://mp.weixin.qq.com/s?__biz=MzA4NzQ5MTA2NA==&mid=2653639431&idx=1&sn=25b6368c1954419b9090840347d9a27d&chksm=8be75b90bc90d286a5af3ef8e610e822d705dc3cf4382b45e3f14489f3e7ec4fd8c95ed0eceb&mpshare=1&scene=2&srcid=0511LMlj9Qv9DeIZAjMjYAU9&sharer_sharetime=1620731348139&sharer_shareid=631c113940cb81f34895aa25ab14422a#rd) and AI Chinese New Star Outstanding Scholar (10 candidates worldwide each year).
+
+My research interest includes speech synthesis, neural machine translation and automatic music generation. I have published more than 20 papers at the top international AI conferences such as NeurIPS, ICML, ICLR, KDD.
+
+To promote the communication among the Chinese ML & NLP community, we (along with other 11 young scholars worldwide) founded the [MLNLP community](https://space.bilibili.com/168887299) in 2021. I am honored to be one of the chairs of the MLNLP committee.
+
+If you like the template of this homepage, welcome to star and fork my open-sourced template version.
 
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
@@ -31,216 +41,166 @@ My research interest includes neural machine translation and computer vision. I 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+
+
+> 800 Dongchuan road, Minhang, Shanghai
+>
+>  180-1515-8812 
+>
+> [ <u>[2019dfff\@sjtu.edu.cn]</u>](mailto:2019dfff@sjtu.edu.cn) 
+>
+> [ <u>[github.com/2020dfff]</u>](https://github.com/)
 
 
 
-
-
-
-
-
-
-[Yang Fei]{.smallcaps}\
-800 Dongchuan road, Minhang, Shanghai\
- 180-1515-8812  
-[ [2019dfff\@sjtu.edu.cn]{.underline}](mailto:2019dfff@sjtu.edu.cn)  
-[ [github.com/2020dfff]{.underline}](https://github.com/)
-
-Education
+📖 Education
 =========
 
 -   ---------------------------------------------------- -------------------------
 
-      **Shanghai Jiaotong University**                       **Sep 2019 -- Present**
-      *Bachelor of Science in **Information Security** *                  *Shanghai*
-      ---------------------------------------------------- -------------------------
+ **Shanghai Jiaotong University**                       **Sep 2019 -- Present**
+  *Bachelor of Science in **Information Security** *                  *Shanghai*
+
+---------------------------------------------------- -------------------------
 
 - **Academic and English proficiency:**
 
   **GPA:** 3.37/4.3    **Major GPA:** 3.49/4.3    **TOEFL:** 95
 
-Relevant Coursework
+
+
+📑 Relevant Coursework
 ===================
 
-4
+| **Data Structures**   | **Principles of Database** | **Computer Network**      | **Cryptography**     |
+| --------------------- | -------------------------- | ------------------------- | -------------------- |
+| **Basic Programming** | **Compiler Principles**    | **Computer Organization** | **Windows Security** |
+| **ICS - (CSAPP)**     | **Software engineering**   | **Data Mining**           | **Operating System** |
 
--   Data Structures
 
--   Basic Programming
 
--   ICS - (CSAPP)
-
--   Principles of Database
-
--   Compiler Principles
-
--   Software engineering
-
--   Computer Network
-
--   Computer Organization
-
--   Data Mining
-
--   Cryptography
-
--   Windows Security
-
--   Operating System
-
-Experience
+💻 Experience
 ==========
 
 -   ------------------------------------------------ -------------------------
 
-      **SJTU Machine Vision and Intelligence Group**     **Dec 2021 -- Present**
-      ***Computer Vision Intern***                               *Prof: Cewu Lu*
-      ------------------------------------------------ -------------------------
+  **SJTU Machine Vision and Intelligence Group**     **Dec 2021 -- Present**
+  ***Computer Vision Intern***                               *Prof: Cewu Lu*
+------------------------------------------------ -------------------------
+
+-    Start from self studying Stanford's cs231n online course, solving the curriculum lab and comparing different models in **computer vision field**.
     
-    -    Start from self studying Stanford's cs231n online course,
-        solving the curriculum lab and comparing different models in
-        **computer vision field**.
-    
-    -    The main research direction is **human pose.**
+-    The main research direction is **human pose.**
 
 -   ------------------------------------------------- --------------------------
 
-      **CITtrip : Student Research Training Program**     **Mar 2021 -- Mar 2022**
-      ***Information Security Researcher***                        *Prof: Jie Guo*
-      ------------------------------------------------- --------------------------
-    
-    -    Use BERT, LDA and other models in the **NLP field** to help
-        analyze harmful speeches on the Internet, realize measurement
-        innovation.
-    
-    -    Define **anonymous** Internet users, establish relationship
-        networks, and identify key users.
+  **CITtrip : Student Research Training Program**     **Mar 2021 -- Mar 2022**
+  ***Information Security Researcher***                        *Prof: Jie Guo*
 
-Projects
+------------------------------------------------- --------------------------
+
+-    Use BERT, LDA and other models in the **NLP field** to help analyze harmful speeches on the Internet, realize measurement innovation.
+-    Define **anonymous** Internet users, establish relationship networks, and identify key users.
+
+
+
+⌨ Projects
 ========
 
 -   ------------------------------------------------------------------ --------------
 
-      **Simple Network Sniffer: EzSniffer** $|$ *Python, Scapy, PyQt5*     **Nov 2021**
-      ------------------------------------------------------------------ --------------
-    
-    -    A simple network sniffer developed based on **linux platform**
-        and **python** language uses **PyQt5** for interface design.
-    
-    -    Main functions include: **capturing and analyzing** the local
-        ethernet selected by the user, realizing packet filtering,
-        searching, IP packet fragmentation and reorganization, and file
-        storage.
-    
-    -    It contains as many types of messages as possible (ICMP, UDP,
-        TCP, etc.), with good **usability and readability.**
+  **Simple Network Sniffer: EzSniffer** $|$ *Python, Scapy, PyQt5*     **Nov 2021**
+------------------------------------------------------------------ --------------
+
+-    A simple network sniffer developed based on **linux platform** and **python** language uses **PyQt5** for interface design.
+-    Main functions include: **capturing and analyzing** the local ethernet selected by the user, realizing packet filtering, searching, IP packet fragmentation and reorganization, and file storage.
+-    It contains as many types of messages as possible (ICMP, UDP, TCP, etc.), with good **usability and readability.**
 
 -   -------------------------------------------------------------------------------------- --------------
 
-      **Campus Carpooling System: Huajiao Carpooling** $|$ *Django, Node.js, React, MySQL*     **May 2021**
-      -------------------------------------------------------------------------------------- --------------
-    
-    -    Realize the **demand of carpooling for students** in partial
-        campus and build a usable website.
-    
-    -    Carried out this group cooperation project in the form of
-        **agile development**, a total of three rounds of iterations,
-        and finally deployed the website.
+ **Campus Carpooling System: Huajiao Carpooling** $|$ *Django, Node.js, React, MySQL*     **May 2021**
 
-Awards
+-------------------------------------------------------------------------------------- --------------
+
+-    Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of
+     **agile development**, a total of three rounds of iterations, and finally deployed the website.
+
+
+
+🏆 Awards
 ======
 
 -   ---------------------------------------------------------------- ------------------------
 
-      Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, Nov 2020**
-      ---------------------------------------------------------------- ------------------------
+Outstanding Undergraduate Scholarship of SJTU; **2×recipient**     **Nov 2021, Nov 2020**
 
 -   --------------------------------------------------- --------------
 
-      Mathematical Contest in Modeling, **Meritorious**     **Apr 2021**
-      --------------------------------------------------- --------------
+ Mathematical Contest in Modeling, **Meritorious**     **Apr 2021**
 
 -   --------------------------------------------------------- --------------
 
-      Mathematical Contest in Modeling, **Honorable Mention**     **Apr 2020**
-      --------------------------------------------------------- --------------
+ Mathematical Contest in Modeling, **Honorable Mention**     **Apr 2020**
 
 -   --------------- --------------
 
-      Merit Student     **Apr 2020**
-      --------------- --------------
+  Merit Student     **Apr 2020**
 
-Technical Skills
+--------------- --------------
+
+
+
+✨ Technical Skills
 ================
 
-**Programming Languages**: Python, C/C++, SQL, MATLAB\...\
-**Security Related Skills**: Cryptography, Penetration test, Misc/Pwn\
-**Technologies/Frameworks**: Linux, Git, Latex, Office\
-**Other Interest**: Basketball, Piano, Hiking\
+***
 
-Leadership / Extracurricular
+**Programming Languages**: Python, C/C++, SQL, MATLAB\...
+**Security Related Skills**: Cryptography, Penetration test, Misc/Pwn
+**Technologies/Frameworks**: Linux, Git, Latex, Office
+**Other Interest**: Basketball, Piano, Hiking
+
+
+
+🦾 Leadership / Extracurricular
 ============================
 
 -   -------------------------------------------- --------------------------
 
-      **College Student Work Office, President**     **Fall 2019 -- Present**
-                                                   
-      -------------------------------------------- --------------------------
-    
-    -    Organize and plan the training course of ideal and faith
-        education in the college, with a total of four sessions, more
-        than **2000 trainees**, and undertake **six forums**.
-    
-    -    Led chapter of **50+** members to work towards goals that
-        improve and promote community service, academics, and unity.
+  **College Student Work Office, President**     **Fall 2019 -- Present**                           
+-------------------------------------------- --------------------------
+
+-    Organize and plan the training course of ideal and faith
+    education in the college, with a total of four sessions, more
+    than **2000 trainees**, and undertake **six forums**.
+
+-    Led chapter of **50+** members to work towards goals that
+    improve and promote community service, academics, and unity.
 
 -   ------------------------ ----------------------------
 
-      **Club Unions, Cadre**     **Fall 2019 -- Fall 2020**
-                               
-      ------------------------ ----------------------------
+**Club Unions, Cadre**     **Fall 2019 -- Fall 2020**   
+
+------------------------ ----------------------------
+
+-    Participate in undertaking **large-scale cultural and sports activities** on campus, such as \"Qiyuan Loy Krathong Festival, Club Recruitment, Student Festival\" and other related activities.
     
-    -    Participate in undertaking **large-scale cultural and sports
-        activities** on campus, such as \"Qiyuan Loy Krathong Festival,
-        Club Recruitment, Student Festival\" and other related
-        activities.
-    
-    -    The cumulative readings of articles related to the event
-        **exceeded one million**.
+-    The cumulative readings of articles related to the event **exceeded one million**.
 
 -   -------------------------------- ---------------
 
-      **Vaccination Site Volunteer**     **Fall 2021**
-                                       
-      -------------------------------- ---------------
+  **Vaccination Site Volunteer**     **Fall 2021** 
 
--   ----------------------------------------------- ---------------
+-------------------------------- ---------------
 
-      **Shanghai International Marathon Volunteer**     **Fall 2020**
-                                                      
-      ----------------------------------------------- ---------------
+ **Shanghai International Marathon Volunteer**     **Fall 2020**              
+
+----------------------------------------------- ---------------
