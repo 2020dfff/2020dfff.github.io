@@ -223,23 +223,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
-
-
-
-
-
-
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-
-
-
-
-# 💬 Invited Talks
-
-
-
 # 💻 Internships
 
 
