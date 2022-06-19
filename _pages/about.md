@@ -233,12 +233,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 <div class='paper-box-text' markdown="1">
 
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-
-
-
-# 
-
 
 
 
