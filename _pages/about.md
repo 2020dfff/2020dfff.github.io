@@ -237,7 +237,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 # ❤️Other Stuff
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2016</div><img src='images/share_fig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/share_fig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 
