@@ -227,7 +227,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 > ### **HUAWEI ICT Department** 
 >
-> > **Aug 2022 (Upcoming)**
+> > **Sep 2022 (Upcoming)**
 >
 > > ***Software Development Engineer***
 
