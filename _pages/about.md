@@ -33,7 +33,7 @@ I won the Outstanding Undergraduate Scholarship of SJTU twice in 2020 & 2021 (To
 
 My research interests include cyber-security, internet protocol and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
 
-I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.google.de/citations?user=QZVQEWAAAAAJ&hl=zh-CN&oi=ao) at [MVIG LAB](https://mvig.sjtu.edu.cn/), and a prospective participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/).
+I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.google.de/citations?user=QZVQEWAAAAAJ&hl=zh-CN&oi=ao) at [MVIG LAB](https://www.mvig.org/),  an enthusiastic participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/) and a member in [DSP LAB]([DSP Lab | Zhou Li – UCI EECS](https://faculty.sites.uci.edu/zhouli/research/)) lead by [Prof. Zhou Li](https://scholar.google.de/citations?hl=zh-CN&user=zxJYEVwAAAAJ).
 
 ## My Basic Information
 
@@ -68,7 +68,9 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - **English proficiency:**
 
-  **TOEFL:** 95
+  **TOEFL:** 101
+  
+  **CET-6:** 551
 
 
 
