@@ -186,10 +186,10 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
   - Shell, Vim, Git, Latex, Office
 - **Language:**
   - Mandarin (Native)
-  - English (TOEFL iBT: 95)
+  - English (TOEFL iBT: 101)
   - French (Beginner)
 - **Media Processing:**
-  - Adobe PR, Adobe PS, Adobe Lightroom
+  - Adobe PR, Adobe PS, Adobe LightRoom
 - **Other Interest**: 
   - Basketball, Piano, Hiking
 
