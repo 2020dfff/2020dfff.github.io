@@ -85,6 +85,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
+
+
 📑 Relevant Coursework
 ===================
 
@@ -99,6 +101,19 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 💻 Experiences
 ==========
+
+***
+
+> ### **UCInspire Summer Program** 
+>
+> > **June 2022 -- Present**
+>
+> > ***UCI security researcher (Remote)***
+> >
+> > ***Prof: Zhou Li***
+
+- Start with basic Graph neural network model on anomaly detection like **DeepWalk, NetWalk and Euler.**
+- Apply NetWalk on **LANL** dataset to help detect unusual online flows, and make a fair comparison with Euler. Develop a new Model for anomaly detection, which has a **much better perfomance** on this topic.
 
 -   ------------------------------------------------ -------------------------
 
@@ -156,8 +171,16 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 >
 > **May 2021**
 
-- Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of
-  **agile development**, a total of three rounds of iterations, and finally deployed the website.
+- Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of **agile development**, a total of three rounds of iterations, and finally deployed the website.
+
+### Personal Blog System 
+
+> **SpringBoot, MyBatis, React, Antd, MySQL **
+>
+> **May 2022**
+
+- Build a platform to express your views and realize fragmented learning, we can also display personalized content. 
+- I’m mainly in charge of building the front-end framework. Considering the simple, clear, and componentizable features of react, it was chosen. Also selected antd as the component library.
 
 
 
@@ -170,6 +193,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 - Mathematical Contest in Modeling, **Meritorious**, Apr 2021
 - Mathematical Contest in Modeling, **Honorable Mention**, Apr 2020
 - Merit Student, Apr 2020
+
+
 
 
 
@@ -219,12 +244,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
-
-
-
-
-
-
 # 💻 Internships
 
 > ### **HUAWEI ICT Department** 
@@ -241,6 +260,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/share_fig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
+
+
 
 
 
