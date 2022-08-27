@@ -175,7 +175,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 ### Personal Blog System 
 
-> **SpringBoot, MyBatis, React, Antd, MySQL **
+> **SpringBoot, MyBatis, React, Antd, MySQL**
 >
 > **May 2022**
 
@@ -260,8 +260,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/share_fig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-
-
 
 
 
