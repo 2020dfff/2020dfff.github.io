@@ -25,7 +25,7 @@ redirect_from:
 
 Welcome to my personal page! 
 
-My name is Yang Fei (费扬), a junior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Computer Science. Prior to that, I graduated my high at [Huaiyin High School]([欢迎光临江苏省淮阴中学！ (huaizhong.com.cn)](http://www.huaizhong.com.cn/index.aspx)) with honor.
+My name is Yang Fei (费扬), a junior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Computer Science. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
 
 I'm always curious about emerging electronics and keen to explore every link from programming to hardware. I hope to be a good computer security researcher, or an industry pioneer driving technological innovation.
 
