@@ -236,7 +236,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
   - The cumulative readings of articles related to the event **exceeded one million**.
 
 - **Vaccination Site Volunteer**, **Fall 2021** 
-- **Shanghai International Marathon Volunteer**, **Fall 2020**              
+- **Shanghai International Marathon Volunteer**, **Fall 2020**
 
 ----------------------------------------------- ---------------
 
@@ -252,14 +252,16 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 >
 > > ***Software Development Engineer***
 
-- Using Golang to solve problems in network products.
+- Members in **packet core network department, ddb group**, focus on distributed database microservices built on cloud core.
+- Mainly using **Golang** to help solve problems, like changing the mml echo output and reading the number of servers from the environment variable.
 
 
 
 # ❤️Other Stuff
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/share_fig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/flkf.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
+
 
 
 
