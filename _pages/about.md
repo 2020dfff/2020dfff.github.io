@@ -62,13 +62,15 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - **Academic Grades:**
 
-  **GPA:** 84/100    **Major GPA:** 3.67/4.3
+  **GPA:** 3.64/4.0    **Major GPA:** 3.86/4.0
   
-- **A courses:**  Modern Number Theory, Information Security Innovation, Operating System, Windows Security, Data Mining and 19 others.
+- **A courses:**  Modern Number Theory, Information Security Innovation, Operating System, Windows Security, Data Mining and 20 others.
 
 - **English proficiency:**
 
   **TOEFL:** 101
+  
+  **GRE: **322
   
   **CET-6:** 551
 
@@ -93,7 +95,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 | **Data Structures**   | **Principles of Database** | **Computer Network**      | **Cryptography**     |
 | --------------------- | -------------------------- | ------------------------- | -------------------- |
 | **Basic Programming** | **Compiler Principles**    | **Computer Organization** | **Windows Security** |
-| **ICS - 1 (CSAPP)**   | **Software engineering**   | **Data Mining**           | **Operating System** |
+| **ICS - 1 (CSAPP)**   | **Software Engineering**   | **Data Mining**           | **Operating System** |
 
 
 
@@ -248,12 +250,12 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 > ### **HUAWEI ICT Department** 
 >
-> > **Sep 2022 (Upcoming)**
+> > **Aug 2022 -- Oct 2022**
 >
 > > ***Software Development Engineer***
 
-- Members in **packet core network department, ddb group**, focus on distributed database microservices built on cloud core.
-- Mainly using **Golang** to help solve problems, like changing the mml echo output and reading the number of servers from the environment variable.
+- Interned in **packet core network department, ddb group**, focus on distributed database microservices built on cloud core. Mainly using **Golang** to help solve problems, like changing the mml echo output and reading the number of servers from the environment variable.
+- We provide a full range of core network software, help operators build an agile, efficient and reliable core network. Build DDB micro-service based on Go Cell framework, realize synchronous data processing and so on.
 
 
 
