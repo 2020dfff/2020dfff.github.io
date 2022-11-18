@@ -25,13 +25,13 @@ redirect_from:
 
 Welcome to my personal page! 
 
-My name is Yang Fei (费扬), a junior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Computer Science. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
+My name is Yang Fei (费扬), a senior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Cyber Science and Engineering. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
 
 I'm always curious about emerging electronics and keen to explore every link from programming to hardware. I hope to be a good computer security researcher, or an industry pioneer driving technological innovation.
 
-I won the Outstanding Undergraduate Scholarship of SJTU twice in 2020 & 2021 (Top 20% in SJTU), and won Meritorious Award in 2021 MCM. I was selected as Merit Student in my sophomore year.
+I won the Outstanding Undergraduate Scholarship of SJTU 3 times in 2020-2022 (Top 20% in SJTU), and won Meritorious Award in 2021 MCM. I was selected as Merit Student in my sophomore year.
 
-My research interests include cyber-security, internet protocol and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
+My research interests include cyber-security, data science and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
 
 I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.google.de/citations?user=QZVQEWAAAAAJ&hl=zh-CN&oi=ao) at [MVIG LAB](https://www.mvig.org/),  an enthusiastic participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/) and a member in [DSP LAB](https://faculty.sites.uci.edu/zhouli/research/) lead by [Prof. Zhou Li](https://scholar.google.de/citations?hl=zh-CN&user=zxJYEVwAAAAJ).
 
