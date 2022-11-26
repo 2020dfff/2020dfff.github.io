@@ -23,13 +23,15 @@ redirect_from:
 
 # 🔥 About Me
 
+***
+
 Welcome to my personal page! 
 
 My name is Yang Fei (费扬), a senior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Cyber Science and Engineering. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
 
 I'm always curious about emerging electronics and keen to explore every link from programming to hardware. I hope to be a good computer security researcher, or an industry pioneer driving technological innovation.
 
-I won the Outstanding Undergraduate Scholarship of SJTU 3 times in 2020-2022 (Top 20% in SJTU), and won Meritorious Award in 2021 MCM. I was selected as Merit Student in my sophomore year.
+I won the Outstanding Undergraduate Scholarship of SJTU 3 times in 2020-2022 (Top 20% in SJTU), also won the Top Cybersecurity Student Scholarship in the fall of 2022. I won Meritorious Award in 2021 MCM, and was selected as Merit Student in my sophomore year.
 
 My research interests include cyber-security, data science and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
 
@@ -70,7 +72,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
   **TOEFL:** 101
   
-  **GRE: **322
+  **GRE:** 322
   
   **CET-6:** 551
 
@@ -91,6 +93,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 📑 Relevant Coursework
 ===================
+
+***
 
 | **Data Structures**   | **Principles of Database** | **Computer Network**      | **Cryptography**     |
 | --------------------- | -------------------------- | ------------------------- | -------------------- |
@@ -152,6 +156,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 ⌨ Projects
 ========
 
+***
+
 ###  **Simple Network Sniffer: EzSniffer**        
 
 > ***Python, Scapy, PyQt5***       
@@ -203,6 +209,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 🏆 Honors and Awards
 ======
+
+***
 
 - Top Cybersecurity Student Scholarship **(Top 3%)**; Nov 2022
 - Outstanding Undergraduate Scholarship of SJTU **(Top 15%)**; **3×recipient**, Nov 2020-2022
@@ -262,6 +270,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 # 💻 Internships
 
+***
+
 > ### **HUAWEI ICT Department** 
 >
 > > **Aug 2022 -- Oct 2022**
@@ -275,8 +285,37 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 # ❤️Other Stuff
 
+***
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/flkf.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
+```html
+<div class="pic">
+     <ul class="carousel clear">
+         <li><a href="#"><img src="images/work/_pic1.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic2.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic3.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic4.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic5.jpg" width="100%" alt=""></a></li>
+         
+         <li><a href="#"><img src="images/work/_pic1.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic2.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic3.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic4.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic5.jpg" width="100%" alt=""></a></li>
+         
+         <li><a href="#"><img src="images/work/_pic1.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic2.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic3.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic4.jpg" width="100%" alt=""></a></li>
+         <li><a href="#"><img src="images/work/_pic5.jpg" width="100%" alt=""></a></li>
+     </ul>
+     <div class="leftArrow"></div>
+     <div class="rightArrow"></div>
+ </div>
+
+```
+
 
 
 
