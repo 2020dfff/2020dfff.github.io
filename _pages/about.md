@@ -289,33 +289,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/flkf.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-```html
-<div class="pic">
-     <ul class="carousel clear">
-         <li><a href="#"><img src="images/work/_pic1.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic2.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic3.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic4.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic5.jpg" width="100%" alt=""></a></li>
-         
-         <li><a href="#"><img src="images/work/_pic1.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic2.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic3.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic4.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic5.jpg" width="100%" alt=""></a></li>
-         
-         <li><a href="#"><img src="images/work/_pic1.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic2.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic3.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic4.jpg" width="100%" alt=""></a></li>
-         <li><a href="#"><img src="images/work/_pic5.jpg" width="100%" alt=""></a></li>
-     </ul>
-     <div class="leftArrow"></div>
-     <div class="rightArrow"></div>
- </div>
-
-```
-
 
 
 
