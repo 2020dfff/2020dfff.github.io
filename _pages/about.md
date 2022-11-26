@@ -20,11 +20,7 @@ redirect_from:
 
 
 
-
 # 🔥 About Me
-
-***
-
 Welcome to my personal page! 
 
 My name is Yang Fei (费扬), a senior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Cyber Science and Engineering. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
@@ -49,8 +45,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
-
-
 📖 Educations
 =========
 
@@ -58,22 +52,22 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 > ### **Shanghai Jiaotong University**   📅 **[Sep 2019 -- Jun 2023(expected)]**
 >
->  Bachelor of Engineering in **Information Security**
+> Bachelor of Engineering in **Information Security**
 
 ---------------------------------------------------- -------------------------
 
 - **Academic Grades:**
 
   **GPA:** 3.64/4.0    **Major GPA:** 3.86/4.0
-  
+
 - **A courses:**  Modern Number Theory, Information Security Innovation, Operating System, Windows Security, Data Mining and 20 others.
 
 - **English proficiency:**
 
   **TOEFL:** 101
-  
+
   **GRE:** 322
-  
+
   **CET-6:** 551
 
 
@@ -131,7 +125,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - Start from self studying Stanford's cs231n online course, solving the curriculum lab and comparing different models in **computer vision field**.
 
--    The main research direction is **human pose.**
+- The main research direction is **human pose.**
 
 ***
 
@@ -145,7 +139,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - Use BERT, LDA and other models in the **NLP field** to help analyze harmful speeches on the Internet, realize measurement innovation.
 
--    Define **anonymous** Internet users, establish relationship networks, and identify key users.
+- Define **anonymous** Internet users, establish relationship networks, and identify key users.
 
 - Our project won the **2022 Outstanding College Innovation Project** in Shanghai.
 
@@ -166,8 +160,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - A simple network sniffer developed based on **linux platform** and **python** language uses **PyQt5** for interface design.
 
--    Main functions include: **capturing and analyzing** the local ethernet selected by the user, realizing packet filtering, searching, IP packet fragmentation and reorganization, and file storage.
--    It contains as many types of messages as possible (ICMP, UDP, TCP, etc.), with good **usability and readability.**
+- Main functions include: **capturing and analyzing** the local ethernet selected by the user, realizing packet filtering, searching, IP packet fragmentation and reorganization, and file storage.
+- It contains as many types of messages as possible (ICMP, UDP, TCP, etc.), with good **usability and readability.**
 
 ***
 
@@ -275,31 +269,38 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
-# ❤️Other Stuff
+# 📝 Publications 
 
-***
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Image Sharing</div><img src='images/flkf.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
-<div class='paper-box'>
-    <div class='paper-box-image'>
-        <div>
-            <div class="badge">
-                image sharing
-            </div>
-            <img src='images/flkf.png' alt="sym" width="100%">
-        </div>
-    </div>
-<div class='paper-box-text' markdown="1">[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
 **Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
 
 [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-  </div>
-  </div>
+</div>
+</div>
 
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
+# 🎖 Honors and Awards
+- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
+# 📖 Educations
+- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+
+# 💬 Invited Talks
+- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+
+# 💻 Internships
+- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
 
 # 🪶Visit Record
+
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY"></script>    
