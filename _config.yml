@@ -9,7 +9,7 @@
 title                    : "Yang Fei (费扬)"
 description              : "Undergraduate students at SJTU. Coding for Something... Or Nothing. "
 repository               : "2020dfff/2020dfff.github.io"
-google_scholar_stats_use_cdn : false
+google_scholar_stats_use_cdn : true
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
