@@ -280,8 +280,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 # 🪶Visit Record
 
-<body>
-
 ```html
 <div align="left">
 <script style="background-size:100%;
@@ -289,8 +287,6 @@ background-attachment: fixed;" type="text/javascript" id="clstr_globe" width="50
 </script>
 </div>
 ```
-</body>
-
 
 
 
