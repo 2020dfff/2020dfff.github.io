@@ -27,7 +27,7 @@ My name is Yang Fei (费扬), a senior student at [SEIEE school](https://www.sei
 
 I'm always curious about emerging electronics and keen to explore every link from programming to hardware. I hope to be a good computer security researcher, or an industry pioneer driving technological innovation.
 
-I won the Outstanding Undergraduate Scholarship of SJTU 3 times in 2020-2022 (Top 20% in SJTU), also won the Top Cybersecurity Student Scholarship in the fall of 2022. I won Meritorious Award in 2021 MCM, and was selected as Merit Student in my sophomore year.
+I won the Outstanding Undergraduate Scholarship of SJTU 3 times in 2020-2022 (Top 15% in SJTU), also won the Top Cybersecurity Student Scholarship in the fall of 2022. I won Meritorious Award in 2021 MCM, and was selected as Merit Student in my sophomore year.
 
 My research interests include cyber-security, data science and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
 
@@ -280,9 +280,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 # 🪶Visit Record
 
-<body  background="images\bg.jpg"
-
-style="background-size:100%;
+<body style="background-size:100%;
 
 background-attachment: fixed;">
     <div align="left">
