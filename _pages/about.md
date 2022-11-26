@@ -25,6 +25,13 @@ redirect_from:
 
 ***
 
+```html
+<a href="文件地址" download="想要的文件名">链接文字</a>
+
+示例：
+<a href="https://fuyeor.com/index/logo.png"  download="Fuyeor Logo">复网标志</a>
+```
+
 Welcome to my personal page! 
 
 My name is Yang Fei (费扬), a senior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Cyber Science and Engineering. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
@@ -318,5 +325,8 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 # 🪶Visit Record
 
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY"></script>
+<div>
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY">
+</script>
+</div>
 
