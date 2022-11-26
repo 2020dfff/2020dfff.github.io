@@ -25,13 +25,6 @@ redirect_from:
 
 ***
 
-```html
-<a href="文件地址" download="想要的文件名">链接文字</a>
-
-示例：
-<a href="https://fuyeor.com/index/logo.png"  download="Fuyeor Logo">复网标志</a>
-```
-
 Welcome to my personal page! 
 
 My name is Yang Fei (费扬), a senior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Cyber Science and Engineering. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
@@ -273,38 +266,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
-# ❤️Other Stuff
-
-***
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/flkf.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-  </div>
-  </div>
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/work/_pic1.jpg' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-  </div>
-  </div>
-
-[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-
 
 
 # 💻 Internships
@@ -322,12 +283,15 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
+# ❤️Other Stuff
+
+***
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/flkf.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
 
 # 🪶Visit Record
 
-<div>
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY">
-</script>
-</div>
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY"></script>
 
