@@ -273,29 +273,13 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
-
-
-# 💻 Internships
-
-***
-
-> ### **HUAWEI ICT Department** 
->
-> > **Aug 2022 -- Oct 2022**
->
-> > ***Software Development Engineer***
-
-- Interned in **packet core network department, ddb group**, focus on distributed database microservices built on cloud core. Mainly using **Golang** to help solve problems, like changing the mml echo output and reading the number of servers from the environment variable.
-- We provide a full range of core network software, help operators build an agile, efficient and reliable core network. Build DDB micro-service based on Go Cell framework, realize synchronous data processing and so on.
-
-
-
 # ❤️Other Stuff
 
 ***
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">image sharing</div><img src='images/flkf.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
+
 [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
 **Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
@@ -320,6 +304,23 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
   </div>
 
 [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+
+
+
+# 💻 Internships
+
+***
+
+> ### **HUAWEI ICT Department** 
+>
+> > **Aug 2022 -- Oct 2022**
+>
+> > ***Software Development Engineer***
+
+- Interned in **packet core network department, ddb group**, focus on distributed database microservices built on cloud core. Mainly using **Golang** to help solve problems, like changing the mml echo output and reading the number of servers from the environment variable.
+- We provide a full range of core network software, help operators build an agile, efficient and reliable core network. Build DDB micro-service based on Go Cell framework, realize synchronous data processing and so on.
+
+
 
 
 
