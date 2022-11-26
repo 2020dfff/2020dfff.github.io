@@ -39,11 +39,11 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 > 800 Dongchuan Road, Minhang, Shanghai
 >
->  180-1515-8812 
+>  +86 180-1515-8812 
 >
 > [ <u>[2019dfff@sjtu.edu.cn]</u>](mailto:2019dfff@sjtu.edu.cn) 
 >
-> [ <u>[github.com/2020dfff]</u>](https://github.com/)
+> [ <u>[github.com/2020dfff]</u>](https://github.com/2020dfff)
 
 
 
@@ -56,7 +56,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 > ### **Shanghai Jiaotong University**   📅 **[Sep 2019 -- Jun 2023(expected)]**
 >
->  Bachelor of Science in **Information Security**
+>  Bachelor of Engineering in **Information Security**
 
 ---------------------------------------------------- -------------------------
 
@@ -108,16 +108,16 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 > ### **UCInspire Summer Program** 
 >
-> > **June 2022 -- Present**
+> > **June 2022 -- Sept 2022**
 >
-> > ***UCI security researcher (Remote)***
+> > ***UCI security researcher***
 > >
 > > ***Prof: Zhou Li***
 
 - Start with basic Graph neural network model on anomaly detection like **DeepWalk, NetWalk and Euler.**
-- Apply NetWalk on **LANL** dataset to help detect unusual online flows, and make a fair comparison with Euler. Develop a new Model for anomaly detection, which has a **much better perfomance** on this topic.
+- Apply NetWalk on **LANL** dataset to help detect unusual online flows, and make a fair comparison with Euler. Develop a new Model for anomaly detection, which has a **much better performance** on this topic.
 
--   ------------------------------------------------ -------------------------
+***
 
 > ### **SJTU Machine Vision and Intelligence Group** 
 >
@@ -145,7 +145,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 -    Define **anonymous** Internet users, establish relationship networks, and identify key users.
 
-
+- Our project won the **2022 Outstanding College Innovation Project** in Shanghai.
 
 
 
@@ -173,7 +173,10 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 >
 > **May 2021**
 
-- Realize the **demand of carpooling for students** in partial campus and build a usable website. Carried out this group cooperation project in the form of **agile development**, a total of three rounds of iterations, and finally deployed the website.
+- Realize the **demand of carpooling for students** in partial campus and build a usable website. 
+- Carried out this group cooperation project in the form of **agile development**, a total of three rounds of iterations, and finally deployed the website.
+
+***
 
 ### Personal Blog System 
 
@@ -184,16 +187,27 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 - Build a platform to express your views and realize fragmented learning, we can also display personalized content. 
 - I’m mainly in charge of building the front-end framework. Considering the simple, clear, and componentizable features of react, it was chosen. Also selected antd as the component library.
 
+***
 
+### "Smart Eyes" - Bridge Bearing Damage Detection System
+
+> **OpenCV, Yolo5, Raspberry Pi**
+>
+> **Aug 2022**
+
+- Manufactures a real-time detection device with a high-quality camera installed on a fixed telescopic pole, and is equipped with a crack damage identification system with a Raspberry Pi as a carrier. 
+
+- Use OpenCV to implement image preprocessing, feature extraction and image matching mechanism, data training on yolov5.
 
 
 
 🏆 Honors and Awards
 ======
 
-- Outstanding Undergraduate Scholarship of SJTU; **2×recipient**, Nov 2021, Nov 2020
-- Mathematical Contest in Modeling, **Meritorious**, Apr 2021
-- Mathematical Contest in Modeling, **Honorable Mention**, Apr 2020
+- Top Cybersecurity Student Scholarship **(Top 3%)**; Nov 2022
+- Outstanding Undergraduate Scholarship of SJTU **(Top 15%)**; **3×recipient**, Nov 2020-2022
+- Mathematical Contest in Modeling, **Meritorious**; Apr 2021
+- Mathematical Contest in Modeling, **Honorable Mention**; Apr 2020
 - Merit Student, Apr 2020
 
 
