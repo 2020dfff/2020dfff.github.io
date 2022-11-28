@@ -284,7 +284,10 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 </div>
 
-<div class="badge-base LI-profile-badge" data-locale="zh_CN" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="扬-费-467945258" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/%E6%89%AC-%E8%B4%B9-467945258?trk=profile-badge">费扬</a></div>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<div class="badge-base LI-profile-badge" data-locale="zh_CN" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="2022dfff" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://cn.linkedin.com/in/2022dfff?trk=profile-badge">Yang Fei</a></div>
+
+
 
 # 👀 Visit Record
 
