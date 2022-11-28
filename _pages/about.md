@@ -195,6 +195,17 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - Use OpenCV to implement image preprocessing, feature extraction and image matching mechanism, data training on yolov5.
 
+### Basic File Safe
+
+> GNU Make, GCC, C/C++
+>
+> **Oct 2022**
+
+- Combined with encryption and access rights control, overloading system calls ensures the security of important personal data from the operating system level. 
+
+- Supported password input and verified user core permissions, also added timer management program.
+
+
 
 
 🏆 Honors and Awards
