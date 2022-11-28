@@ -83,8 +83,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 
 
-
-
 📑 Relevant Coursework
 ===================
 
@@ -283,9 +281,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 </div>
 
 </div>
-
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-<div class="badge-base LI-profile-badge" data-locale="zh_CN" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="2022dfff" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://cn.linkedin.com/in/2022dfff?trk=profile-badge">Yang Fei</a></div>
 
 
 
