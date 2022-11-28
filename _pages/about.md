@@ -154,8 +154,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 >
 > **Nov 2021**
 
-***
-
 - A simple network sniffer developed based on **linux platform** and **python** language uses **PyQt5** for interface design.
 
 - Main functions include: **capturing and analyzing** the local ethernet selected by the user, realizing packet filtering, searching, IP packet fragmentation and reorganization, and file storage.
@@ -195,9 +193,11 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - Use OpenCV to implement image preprocessing, feature extraction and image matching mechanism, data training on yolov5.
 
+***
+
 ### Basic File Safe
 
-> GNU Make, GCC, C/C++
+> **GNU Make, GCC, C/C++**
 >
 > **Oct 2022**
 
@@ -259,8 +259,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 - **Vaccination Site Volunteer**, **Fall 2021** 
 - **Shanghai International Marathon Volunteer**, **Fall 2020**
 
------------------------------------------------ ---------------
-
 
 
 # 💻 Internships
@@ -289,13 +287,12 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
         </div>
     </div>
 <div class='paper-box-text' markdown="1">
-</div>
 
 </div>
 
-
+</div>
 
 # 👀 Visit Record
 
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY"></script>
+<body><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY"></script></body>
 
