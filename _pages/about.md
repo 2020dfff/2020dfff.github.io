@@ -23,23 +23,23 @@ redirect_from:
 # 🔥 About Me
 Welcome to my personal page! 
 
-My name is Yang Fei (费扬), a senior student at [SEIEE school](https://www.seiee.sjtu.edu.cn/), Shanghai JiaoTong University (上海交通大学电子信息与电气工程学院), major in Information Security. Expect to graduate in 2023.06 with a bachelor’s degree from the Department of Cyber Science and Engineering. Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
+My name is Yang Fei (费扬), a freshman master student at School of Computing, National University of Singapore, major in Computer Science. I graduated from Shanghai Jiao Tong University in 2023.06 with a bachelor’s degree from the Department of Cyber Science and Engineering, [SEIEE school](https://www.seiee.sjtu.edu.cn/). Prior to that, I graduated my high at [Huaiyin High School](http://www.huaizhong.com.cn/index.aspx) with honor.
 
 I'm always curious about emerging electronics and keen to explore every link from programming to hardware. I hope to be a good computer security researcher, or an industry pioneer driving technological innovation.
 
 I won the Outstanding Undergraduate Scholarship of SJTU 3 times in 2020-2022 (Top 15% in SJTU), also won the Top Cybersecurity Student Scholarship in the fall of 2022. I won Meritorious Award in 2021 MCM, and was selected as Merit Student in my sophomore year.
 
-My research interests include cyber-security, data science and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
+My research interests include GNN, data-driven security and the intersection between computer security & machine learning. I have researched in several groups and maintain close communication with professional teachers in different fields.
 
-I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.google.de/citations?user=QZVQEWAAAAAJ&hl=zh-CN&oi=ao) at [MVIG LAB](https://www.mvig.org/),  an enthusiastic participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/) and a member in [DSP LAB](https://faculty.sites.uci.edu/zhouli/research/) lead by [Prof. Zhou Li](https://scholar.google.de/citations?hl=zh-CN&user=zxJYEVwAAAAJ).
+I finished my graduation project under the guidance of [Prof. Jiaping Gui](https://guijiaping.github.io/) at SJTU, also conducted research under the guidance of [Prof. Cewu Lu](https://scholar.google.de/citations?user=QZVQEWAAAAAJ&hl=zh-CN&oi=ao) at [MVIG LAB](https://www.mvig.org/),  I was an enthusiastic participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/), participated in [DSP LAB](https://faculty.sites.uci.edu/zhouli/research/) lead by [Prof. Zhou Li](https://scholar.google.de/citations?hl=zh-CN&user=zxJYEVwAAAAJ).
 
 ## My Basic Information
 
-> 800 Dongchuan Road, Minhang, Shanghai
+> 21 Lower Kent Ridge Rd, Singapore 119077
 >
->  +86 180-1515-8812 
+> +65 88851417 / +86 18015158812 
 >
-> [ <u>[2019dfff@sjtu.edu.cn]</u>](mailto:2019dfff@sjtu.edu.cn) 
+> [ <u>[yfei11@u.nus.edu]</u>](mailto:yfei11@u.nus.edu) / [ <u>[2019dfff@sjtu.edu.cn]</u>](mailto:2019dfff@sjtu.edu.cn) 
 >
 > [ <u>[github.com/2020dfff]</u>](https://github.com/2020dfff)
 
@@ -50,7 +50,19 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 -   ---------------------------------------------------- -------------------------
 
-> ### **Shanghai Jiaotong University**   📅 **[Sep 2019 -- Jun 2023(expected)]**
+> ### **National University of Singapore**   📅 **[Aug 2023 -- May 2025(expected)]**
+>
+> Master of Computing, **Computer Science Track**
+
+---------------------------------------------------- -------------------------
+
+- 
+
+- 
+
+-   ---------------------------------------------------- -------------------------
+
+> ### **Shanghai Jiaotong University**   📅 **[Sep 2019 -- Jun 2023]**
 >
 > Bachelor of Engineering in **Information Security**
 
@@ -64,7 +76,7 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
 
 - **English proficiency:**
 
-  **TOEFL:** 101
+  **TOEFL:** 109
 
   **GRE:** 322
 
@@ -288,7 +300,6 @@ I am now doing research under the guidance of [Prof. Cewu Lu](https://scholar.go
     </div>
 <div class='paper-box-text' markdown="1">
 </div>
-
 </div>
 
 # 👀 Visit Record
