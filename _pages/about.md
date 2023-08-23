@@ -238,8 +238,8 @@ I finished my graduation project under the guidance of [Prof. Jiaping Gui](https
 
 ***
 
-- **Programming Languages**: 
-  - Python, C/C++, Java, JavaScript, Verilog HDL, SQL, MATLAB\...
+- **Preferred Programming Languages**: 
+  - Python, C/C++, Golang...
 - **Security Related Skills**: 
   - Cryptography, Penetration test, Misc/Pwn
 - **Script Tools/Text Editor/Management Tools:**
