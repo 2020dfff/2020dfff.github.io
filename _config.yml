@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Yang Fei (费扬)"
-description              : "Undergraduate students at SJTU. Coding for Something... Or Nothing. "
+description              : "Master student at NUS. Coding for Something... Or Nothing. "
 repository               : "2020dfff/2020dfff.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,8 +23,8 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Yang Fei"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Shanghai JiaoTong University"
-  location         : "Shanghai, China"
+  bio              : "National University of Singapore"
+  location         : "Singapore"
   employer         :
   pubmed           : 
   googlescholar    : # "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"

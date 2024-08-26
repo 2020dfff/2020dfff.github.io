@@ -1,16 +1,16 @@
 # main links links
 main:
-  - title: "About Me"
+  - title: "About"
     url: "/#about-me"
 
-  - title: "Educations"
+  - title: "Pubs"
+    url: "/#-publications"
+
+  - title: "Academic"
     url: "/#-educations"
   
-  - title: "Experiences"
-    url: "/#-experiences"
-
-  - title: "Projects"
-    url: "/#-projects"
+  - title: "Research"
+    url: "/#-research-experiences"
 
   - title: "Honors and Awards"
     url: "/#-honors-and-awards"
@@ -18,5 +18,5 @@ main:
   - title: "Internships"
     url: "/#-internships"
     
-  - title: "Other Stuff"
-    url: "/#-other-stuff"  
+  - title: "Misc"
+    url: "/#-misc"  
