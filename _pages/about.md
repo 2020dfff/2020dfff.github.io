@@ -42,6 +42,10 @@ I have researched in several groups and maintain close communication with profes
 
 2. Shengyue Yao\*, **Yang Fei\***, Shanzhe Lei, Xuhong Wang, Lin Yilun, Yu Qiao, *Optimizing Organization in Multi-Agent Systems via a Time and Task Sensitive Strategy $T^2$SO: Theoretical and Practical Evidences*, (Submitted to **AAAI'25**), Aug 2024.
 
+3. Keke Huang, Yimin Shi, Dujian Ding, Yifei Li, **Yang Fei**, Laks Lakshmanan, Xiaokui Xiao, ThriftLLM: On
+   Cost-Effective Selection of Large Language Models for Optimal Query Performance, ([Preprint](https://arxiv.org/abs/2501.04901)), Oct 2024.
+
+
 🏫 Educations
 =============
 
@@ -115,8 +119,8 @@ I have researched in several groups and maintain close communication with profes
 > >
 > > ***Prof. Zhou Li***
 
-- Start with basic Graph neural network model on anomaly detection like **DeepWalk, NetWalk and Euler.**
-- Apply NetWalk on **LANL** dataset to help detect unusual online flows, and make a fair comparison with Euler. Develop a new Model for anomaly detection, which has a **much better performance** on this topic.
+- Start with basic Graph neural network model on anomaly detection like **DeepWalk, NetWalk and Euler. **Apply NetWalk on **LANL** dataset to help detect unusual online flows.
+- Adapt existing model for anomaly detection, and make fair comparison.
 
 ---
 
@@ -221,7 +225,6 @@ I have researched in several groups and maintain close communication with profes
 - Other Interest:
 
   - Basketball: I participate in several basketball teams in my high school, SJTU and NUS.
-  - Hiking:
   - Scuba Diving: I will immediately pursue a AOW this year once I have time! (OW is not enough!)
 
 🦾 Leadership / Extracurricular
