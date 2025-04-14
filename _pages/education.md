@@ -29,6 +29,14 @@ author_profile: true
 - **Major GPA:** 3.74
 - **A courses:**  Modern Number Theory, Information Security Innovation, Operating System, Windows Security, Data Mining and 20 others.
 
+> ### **University of California, Irvine**   📅 **[Jun 2022 -- Sep 2022]**
+>
+> Summer Semester, **Computer Engineering**
+
+---
+
+- **GPA:** 4.0
+
 ---
 
 > ### **Huaiyin High School**   📅 **[Sep 2016 -- Jun 2019]**
