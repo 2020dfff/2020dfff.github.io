@@ -10,6 +10,8 @@ title                    : "Yang Fei (费扬)"
 description              : "Master student at NUS. Coding for Something... Or Nothing. "
 repository               : "2020dfff/2020dfff.github.io"
 google_scholar_stats_use_cdn : true
+url                      : "http://127.0.0.1:4000" # 本地开发URL
+baseurl                  : ""
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
@@ -135,7 +137,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /:title/
 timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
