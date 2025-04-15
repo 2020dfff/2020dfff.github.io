@@ -4,25 +4,19 @@ title: "Welcome to My Blog"
 date: 2025-04-07
 categories: general
 tags: welcome introduction
-excerpt: "An introduction to my new blog where I'll share my thoughts on computer science research and projects."
+excerpt: "An introduction to my new blog where I'll share my thoughts."
 published: true
 ---
-Hello everyone! I'm excited to launch my blog where I'll be sharing my thoughts, experiences, and insights about my journey in computer science research.
+I'm excited to launch my blog where I'll be sharing my thoughts, experiences, and insights.
 
 ## What to Expect
 
-On this blog, I plan to write about:
+With this blog, I plan to keep records on things like:
 
-- Recent developments in Graph Algorithms and Data Mining
 - My experiences in research projects
 - Interesting papers and research findings
 - Insights from conferences and academic events
 - Tutorials and explanations of complex topics
+- On the Road: Stories from the Journey
 
-## Why I Started This Blog
-
-As a researcher in Computer Science, I believe in the importance of sharing knowledge and building a community. This blog will serve as a platform for me to document my journey, share my learnings, and connect with like-minded individuals.
-
-I hope you find the content useful and engaging. Feel free to reach out if you have any questions or suggestions for topics you'd like me to cover.
-
-Stay tuned for more posts soon!
+**Stay tuned for more posts soon!**
