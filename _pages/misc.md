@@ -180,25 +180,25 @@ am5.ready(function () {
         paddingRight: 20
       })
     );
-  
+      
     var worldSeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
         exclude: ["AQ"]
       })
     );
-  
+      
     worldSeries.mapPolygons.template.setAll({
       tooltipText: "{name}",
       interactive: true,
       fill: am5.color(0xE4E4E4),
       stroke: am5.color(0xFFFFFF)
     });
-  
+      
     worldSeries.mapPolygons.template.states.create("hover", {
       fill: am5.color(0xDDDDDD)
     });
-  
+      
     const livedData = { CN: "2001 – 2023", SG: "2023 – now" };
     const visitedData = {
       US: "Jan 2024, Feb 2025",
@@ -214,7 +214,7 @@ am5.ready(function () {
       IT: "Planning",
       AU: "Planning"
     };
-  
+      
     var livedSeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
@@ -230,7 +230,7 @@ am5.ready(function () {
       var id = target.dataItem.dataContext.id;
       return "{name}: Lived\n居住时间：" + livedData[id];
     });
-  
+      
     var visitedSeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
@@ -246,7 +246,7 @@ am5.ready(function () {
       var id = target.dataItem.dataContext.id;
       return "{name}: Visited\n访问时间：" + visitedData[id];
     });
-  
+      
     var plannedSeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
@@ -262,7 +262,7 @@ am5.ready(function () {
       var id = target.dataItem.dataContext.id;
       return "{name}: " + plannedData[id];
     });
-  
+      
     const cityMarkers = [
   { title: "Los Angeles", latitude: 34.0522, longitude: -118.2437 },
   { title: "San Francisco", latitude: 37.7749, longitude: -122.4194 },
@@ -326,7 +326,7 @@ citySeries.data.setAll(cityMarkers);
     chart.chartContainer.get("background").events.on("click", function () {
       chart.goHome();
     });
-  
+      
     chart.appear(1000, 100);
   } catch (error) {
     console.error("地图渲染失败：", error);
