@@ -10,7 +10,8 @@ title                    : "Yang Fei (费扬)"
 description              : "Master student at NUS. Coding for Something... Or Nothing. "
 repository               : "2020dfff/2020dfff.github.io"
 google_scholar_stats_use_cdn : true
-url                      : "https://sharkiefff.xyz" # Production URL
+# url                      : "https://sharkiefff.xyz" # Production URL
+url                      : "https://www.comp.nus.edu.sg/~yfei11" # NUS Server URL
 baseurl                  : ""
 
 # google analytics
@@ -24,7 +25,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Yang Fei"
-  avatar           : "images/fy_jp.jpg"
+  avatar           : "/images/fy_jp.jpg"
   bio              : "National University of Singapore"
   location         : "Singapore"
   employer         :
