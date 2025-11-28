@@ -1,6 +1,0 @@
-# Allow all crawlers
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://www.comp.nus.edu.sg/~yfei11/sitemap.xml 
