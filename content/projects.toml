@@ -1,0 +1,33 @@
+type = "card"
+title = "Selected Course Projects"
+description = "Some of my notable course projects"
+
+[[items]]
+title = "Simple Network Sniffer: EzSniffer"
+subtitle = "Python, Scapy, PyQt5"
+date = "Nov 2021"
+content = "A simple network sniffer developed based on linux platform and python language uses PyQt5 for interface design. Main functions include: capturing and analyzing the local ethernet selected by the user, realizing packet filtering, searching, IP packet fragmentation and reorganization, and file storage. It contains as many types of messages as possible (ICMP, UDP, TCP, etc.), with good usability and readability."
+
+[[items]]
+title = "Campus Carpooling System: Huajiao Carpooling"
+subtitle = "Django, Node.js, React, MySQL"
+date = "May 2021"
+content = "Realize the demand of carpooling for students in partial campus and build a usable website. Carried out this group cooperation project in the form of agile development, a total of three rounds of iterations, and finally deployed the website."
+
+[[items]]
+title = "Personal Blog System"
+subtitle = "SpringBoot, MyBatis, React, Antd, MySQL"
+date = "May 2022"
+content = "Build a platform to express your views and realize fragmented learning, we can also display personalized content. Mainly in charge of building the front-end framework. Considering the simple, clear, and componentizable features of react, it was chosen. Also selected antd as the component library."
+
+[[items]]
+title = "Smart Eyes - Bridge Bearing Damage Detection System"
+subtitle = "OpenCV, Yolo5, Raspberry Pi"
+date = "Aug 2022"
+content = "Manufactures a real-time detection device with a high-quality camera installed on a fixed telescopic pole, and is equipped with a crack damage identification system with a Raspberry Pi as a carrier. Use OpenCV to implement image preprocessing, feature extraction and image matching mechanism, data training on yolov5."
+
+[[items]]
+title = "Basic File Safe"
+subtitle = "GNU Make, GCC, C/C++"
+date = "Oct 2022"
+content = "Combined with encryption and access rights control, overloading system calls ensures the security of important personal data from the operating system level. Supported password input and verified user core permissions, also added timer management program."

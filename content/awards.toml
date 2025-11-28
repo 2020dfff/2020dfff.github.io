@@ -3,25 +3,31 @@ title = "Awards"
 description = "Honors and awards I have received."
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
-date = "2025"
-content = "Description of the award."
-
-[[items]]
-title = "Example Award"
-subtitle = "Organization"
-date = "2024"
-content = "Description of the award."
-
-[[items]]
-title = "Example Award"
-subtitle = "Organization"
-date = "2023"
-content = "Description of the award."
-
-[[items]]
-title = "Example Award"
-subtitle = "Organization"
+title = "Top Cybersecurity Student Scholarship"
+subtitle = "Shanghai Jiao Tong University"
 date = "2022"
-content = "Description of the award."
+content = "Top 3% - Nov 2022"
+
+[[items]]
+title = "Outstanding Undergraduate Scholarship"
+subtitle = "Shanghai Jiao Tong University"
+date = "2020-2022"
+content = "Top 15%, 3× recipient - Nov 2020-2022"
+
+[[items]]
+title = "Mathematical Contest in Modeling - Meritorious"
+subtitle = "MCM"
+date = "2021"
+content = "Apr 2021"
+
+[[items]]
+title = "Mathematical Contest in Modeling - Honorable Mention"
+subtitle = "MCM"
+date = "2020"
+content = "Apr 2020"
+
+[[items]]
+title = "Merit Student"
+subtitle = "Shanghai Jiao Tong University"
+date = "2020"
+content = "Apr 2020"

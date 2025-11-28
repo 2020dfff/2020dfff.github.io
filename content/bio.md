@@ -1,5 +1,7 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am a second-year master and an incoming PhD at [School of Computing](https://www.comp.nus.edu.sg/), National University of Singapore, major in Computer Science. I graduated as **Shanghai Outstanding Undergraduate** from Shanghai Jiao Tong University in 2023.06 with a bachelor's degree from the Department of Cyber Science and Engineering, [SEIEE school](https://www.seiee.sjtu.edu.cn/).
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
+I won the **Outstanding Undergraduate Scholarship** of SJTU 3 times in 2020-2022 (Top 15% in SJTU), also won the **Top Cybersecurity Student Scholarship** in the fall of 2022. I won Meritorious Award in 2021 MCM, and was selected as Merit Student in my sophomore year.
 
-My current research focuses on investigating the mathematical principles of natural philosophy.
+I am deeply interested in research areas encompassing **Graph Algorithm** and **Data Mining** skills. My passion lies in applying my mathematical and programming expertise to address real-world challenges in network analysis, including the simulation of **social, recommender or multi-agent systems**. I am also keen to explore the innovative applications of **LLMs** within these domains.
+
+I have researched in several groups and maintain close communication with professional teachers in different fields. I finished my graduation project under the guidance of [Prof. Jiaping Gui](https://guijiaping.github.io/) at SJTU, was an enthusiastic participant in the 2022 [UCInspire program](https://sites.uci.edu/ucinspire/research-faculty/), participated in [DSP LAB](https://faculty.sites.uci.edu/zhouli/research/) lead by [Prof. Zhou Li](https://scholar.google.de/citations?hl=zh-CN&user=zxJYEVwAAAAJ). I am now under the guidance of [Prof. Xiaokui XIAO](https://www.comp.nus.edu.sg/~xiaoxk/) at NUS.

@@ -1,29 +1,29 @@
 [site]
-title = "Jiale Liu"
-description = "PhD student at the University of Example."
+title = "Yang Fei (费扬)"
+description = "Master student at NUS. Coding for Something... Or Nothing."
 favicon = "/favicon.svg"
-last_updated = "November 18, 2025"
+last_updated = "November 28, 2025"
 
 [author]
-name = "Jiale Liu"
-title = "PhD Student"
-institution = "University of Example"
-avatar = "/bio.jpg"
+name = "Yang Fei"
+title = "Master Student & Incoming PhD"
+institution = "National University of Singapore"
+avatar = "/images/fy_jp.jpg"
 
 [social]
 # Contact information (leave blank or delete to hide)
 
-email = "john.doe@example.com"
-location = "City, Country"
-location_url = "https://maps.google.com"
+email = "yfei11@u.nus.edu"
+location = "Singapore"
+location_url = "https://maps.google.com/maps/place/Singapore"
 location_details = [
-  "Room 123, Science Building,",
-  "University Avenue, City, Country"
+  "21 Lower Kent Ridge Rd,",
+  "Singapore 119077"
 ]
-google_scholar = "https://scholar.google.com"
-orcid = "https://orcid.org"
-github = "https://github.com"
-linkedin = "https://linkedin.com"
+google_scholar = "https://scholar.google.com/citations?user=ZnShSQwAAAAJ&hl=en"
+orcid = ""
+github = "https://github.com/2020dfff"
+linkedin = "https://www.linkedin.com/in/2022dfff"
 
 [features]
 # Show a like button on the about page
@@ -45,22 +45,34 @@ target = "publications"
 href = "/publications"
 
 [[navigation]]
-title = "Teaching"
+title = "Research"
 type = "page"
-target = "teaching"
-href = "/teaching"
+target = "research"
+href = "/research"
 
 [[navigation]]
-title = "Awards"
+title = "Internships"
 type = "page"
-target = "awards"
-href = "/awards"
+target = "internships"
+href = "/internships"
 
 [[navigation]]
-title = "Services"
+title = "Projects"
 type = "page"
-target = "services"
-href = "/services"
+target = "projects"
+href = "/projects"
+
+[[navigation]]
+title = "Education"
+type = "page"
+target = "education"
+href = "/education"
+
+[[navigation]]
+title = "Blog"
+type = "page"
+target = "blog"
+href = "/blog"
 
 [[navigation]]
 title = "CV"

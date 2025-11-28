@@ -1,0 +1,27 @@
+type = "card"
+title = "Research Experiences"
+description = "My research experiences and projects"
+
+[[items]]
+title = "A Persona-Based LLM-assisted Recommender System"
+subtitle = "Master Dissertation, Prof. Xiaokui Xiao"
+date = "Nov 2023 - Aug 2024"
+content = "Leverage LLM-assigned persona labels to construct a tripartite graph and apply rec-models like LGCN. Improve major accuracy metrics by 5-15% when intuitively combined with the sota GNN-based recommender system."
+
+[[items]]
+title = "Network Anomalous Node Identification"
+subtitle = "Graduation Project, Prof. Jiaping Gui"
+date = "Jan 2023 - Jun 2023"
+content = "Quickly and effectively perform anomalous node detection and reliability analysis. Realize the general application from offline collected data sets to public data sets based on the graph theory algorithm. Form a journal article in Cyber Security and Data Governance."
+
+[[items]]
+title = "UCInspire Summer Program"
+subtitle = "Summer Research, Prof. Zhou Li"
+date = "Jun 2022 - Sep 2022"
+content = "Start with basic Graph neural network model on anomaly detection like DeepWalk, NetWalk and Euler. Apply NetWalk on LANL dataset to help detect unusual online flows. Adapt existing model for anomaly detection, and make fair comparison."
+
+[[items]]
+title = "CITtrip: Student Research Training Program"
+subtitle = "College Innovation Program, Prof. Jie Guo"
+date = "Mar 2021 - Mar 2022"
+content = "Use BERT, LDA and other models in the NLP field to help analyze harmful speeches on the Internet. Define anonymous Internet users, establish relationship networks, and identify key users. Our project won the 2022 Outstanding College Innovation Project in Shanghai."
