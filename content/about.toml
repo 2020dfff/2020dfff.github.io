@@ -3,9 +3,11 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematical Principles",
-  "Proof of Theorems"
+  "Graph Algorithm",
+  "Data Mining",
+  "Social Networks",
+  "Recommender Systems",
+  "Large Language Models"
 ]
 
 [[sections]]
@@ -26,4 +28,10 @@ id = "news"
 type = "list"
 title = "News"
 source = "news.toml"
+
+[[sections]]
+id = "awards"
+type = "cards"
+title = "Honors and Awards"
+source = "awards.toml"
 
