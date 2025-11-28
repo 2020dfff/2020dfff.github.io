@@ -1,14 +1,14 @@
 [site]
 title = "Yang Fei (费扬)"
 description = "Master student at NUS. Coding for Something... Or Nothing."
-favicon = "/favicon.svg"
+favicon = "/fy_bio.jpg"
 last_updated = "November 28, 2025"
 
 [author]
 name = "Yang Fei"
-title = "Master Student & Incoming PhD"
+title = "1st-year PhD"
 institution = "National University of Singapore"
-avatar = "/images/fy_jp.jpg"
+avatar = "/fy_bio.jpg"
 
 [social]
 # Contact information (leave blank or delete to hide)
@@ -24,6 +24,7 @@ google_scholar = "https://scholar.google.com/citations?user=ZnShSQwAAAAJ&hl=en"
 orcid = ""
 github = "https://github.com/2020dfff"
 linkedin = "https://www.linkedin.com/in/2022dfff"
+twitter = "https://twitter.com/Faye2020D"
 
 [features]
 # Show a like button on the about page
@@ -67,6 +68,18 @@ title = "Education"
 type = "page"
 target = "education"
 href = "/education"
+
+[[navigation]]
+title = "Misc"
+type = "page"
+target = "misc"
+href = "/misc"
+
+[[navigation]]
+title = "Blog"
+type = "page"
+target = "blog"
+href = "/blog"
 
 [[navigation]]
 title = "CV"

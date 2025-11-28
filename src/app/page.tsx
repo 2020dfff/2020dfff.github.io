@@ -15,7 +15,7 @@ import { BasePageConfig, PublicationPageConfig, TextPageConfig, CardPageConfig }
 // Define types for section config
 interface SectionConfig {
   id: string;
-  type: 'markdown' | 'publications' | 'list';
+  type: 'markdown' | 'publications' | 'list' | 'cards';
   title?: string;
   source?: string;
   filter?: string;
@@ -64,6 +64,14 @@ export default function Home() {
           return {
             ...section,
             items: newsData?.news || []
+          };
+        }
+        case 'cards': {
+          // Load card items from TOML (e.g., awards.toml)
+          const cardData = section.source ? getTomlContent<{ items: any[] }>(section.source) : null;
+          return {
+            ...section,
+            items: cardData?.items || []
           };
         }
         default:
@@ -171,6 +179,35 @@ export default function Home() {
                         key={section.id}
                         items={section.items || []}
                         title={section.title}
+                      />
+                    );
+                  case 'cards':
+                    // By default, render cards with CardPage to preserve layout for services/teaching/projects etc.
+                    // Only render as compact News list for awards (to match user's preference).
+                    const isAwards = (section.source === 'awards.toml') || (section.id === 'awards');
+                    if (isAwards) {
+                      const newsItems = ((section.items as any[]) || []).map(it => ({
+                        date: it.date || '',
+                        content: `${it.title || ''}${it.subtitle ? ' — ' + it.subtitle : ''}${it.content ? '\n' + it.content : ''}`
+                      }));
+                      return (
+                        <News
+                          key={section.id}
+                          items={newsItems}
+                          title={section.title}
+                        />
+                      );
+                    }
+                    return (
+                      <CardPage
+                        key={section.id}
+                        config={{
+                          type: 'card',
+                          title: section.title || '',
+                          description: undefined,
+                          items: (section.items as any[]) || []
+                        }}
+                        embedded={true}
                       />
                     );
                   default:

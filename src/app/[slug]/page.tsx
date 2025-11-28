@@ -51,7 +51,7 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
                 <PublicationPage config={pageConfig as PublicationPageConfig} />
             )}
             {pageConfig.type === 'text' && (
-                <TextPageWrapper config={pageConfig as TextPageConfig} />
+                <TextPageWrapper config={pageConfig as TextPageConfig} slug={slug} />
             )}
             {pageConfig.type === 'card' && (
                 <CardPage config={pageConfig as CardPageConfig} />
@@ -66,7 +66,7 @@ function PublicationPage({ config }: { config: PublicationPageConfig }) {
     return <PublicationsList config={config} publications={publications} />;
 }
 
-function TextPageWrapper({ config }: { config: TextPageConfig }) {
+function TextPageWrapper({ config, slug }: { config: TextPageConfig; slug: string }) {
     const content = getMarkdownContent(config.source);
-    return <TextPage config={config} content={content} />;
+    return <TextPage config={config} content={content} slug={slug} />;
 }

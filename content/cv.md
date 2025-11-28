@@ -66,3 +66,4 @@ University of California, Irvine, Prof. Zhou Li, *Jun 2022 - Sep 2022*
 1. Yimin Shi, **Yang Fei**, Shiqi Zhang, Haixun Wang, Xiaokui Xiao. "You Are What You Bought: Generating Customer Personas for E-commerce Applications." SIGIR'25, Aug 2024.
 
 2. Keke Huang, Yimin Shi, Dujian Ding, Yifei Li, **Yang Fei**, Laks Lakshmanan, Xiaokui Xiao. "ThriftLLM: On Cost-Effective Selection of Large Language Models for Optimal Query Performance." Preprint, Oct 2024.
+2. Keke Huang, Yimin Shi, Dujian Ding, Yifei Li, **Yang Fei**, Laks Lakshmanan, Xiaokui Xiao. "ThriftLLM: On Cost-Effective Selection of Large Language Models for Optimal Query Performance." VLDB 2025 (Accepted).

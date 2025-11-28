@@ -1,0 +1,4 @@
+type = "text"
+title = "Miscellaneous"
+description = "My hobbies, leadership experiences, skills, and travel footprints"
+source = "misc.md"

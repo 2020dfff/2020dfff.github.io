@@ -3,11 +3,9 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Graph Algorithm",
-  "Data Mining",
-  "Social Networks",
-  "Recommender Systems",
-  "Large Language Models"
+  "Large Language Models",
+  "AI for Database",
+  "Generative Recommender Systems",
 ]
 
 [[sections]]

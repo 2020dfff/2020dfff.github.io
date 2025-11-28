@@ -50,24 +50,12 @@ export default function RootLayout({
           as="style"
           href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
         />
+        {/* Load Google Fonts stylesheet directly (rendered the same on server and client) */}
         <link
           rel="stylesheet"
           id="gfonts-css"
           href="https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
-          media="print"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(){
-                var l = document.getElementById('gfonts-css');
-                if (!l) return;
-                if (l.media !== 'all') {
-                  l.addEventListener('load', function(){ try { l.media = 'all'; } catch(e){} });
-                }
-              })();
-            `,
-          }}
+          media="all"
         />
         <noscript>
           {/* Fallback for no-JS environments */}
