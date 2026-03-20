@@ -55,10 +55,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     };
   }, [theme, mounted]);
 
-  // Prevent flash of unstyled content
-  if (!mounted) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>;
-  }
-
+  // Theme is already applied via the inline <script> in <head> (layout.tsx),
+  // so we don't need to hide content while waiting for hydration.
+  // Previously used visibility:hidden which could cause the entire page to
+  // remain invisible if hydration failed (e.g., due to ClustrMaps script conflicts).
   return <>{children}</>;
 } 

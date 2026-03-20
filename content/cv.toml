@@ -1,3 +1,4 @@
-type = "text"
+type = "pdf"
 title = "CV"
-source = "cv.md"
+source = "/cv/Yang_Fei_CV_2025.pdf"
+download_filename = "Yang_Fei_CV_2025.pdf"

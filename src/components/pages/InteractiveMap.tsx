@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { withBasePath } from '@/lib/basePath';
 
 declare global {
   var am5: any;
@@ -241,33 +242,33 @@ export default function InteractiveMap() {
       <div className="photo-gallery">
         <div className="gallery-column">
           <div className="gallery-item">
-            <img src="/images/basketball1.png" alt="Basketball" />
+            <img src={withBasePath('/images/basketball1.png')} alt="Basketball" />
             <div className="caption">Basketball</div>
           </div>
           <div className="gallery-item">
-            <img src="/images/basketball2.png" alt="Basketball" />
+            <img src={withBasePath('/images/basketball2.png')} alt="Basketball" />
             <div className="caption">Basketball</div>
           </div>
         </div>
 
         <div className="gallery-column">
           <div className="gallery-item">
-            <img src="/images/diving5.png" alt="Diving" />
+            <img src={withBasePath('/images/diving5.png')} alt="Diving" />
             <div className="caption">Diving</div>
           </div>
           <div className="gallery-item">
-            <img src="/images/diving3.png" alt="Diving" />
+            <img src={withBasePath('/images/diving3.png')} alt="Diving" />
             <div className="caption">Diving</div>
           </div>
         </div>
 
         <div className="gallery-column">
           <div className="gallery-item">
-            <img src="/images/dingdang.png" alt="My dog" />
+            <img src={withBasePath('/images/dingdang.png')} alt="My dog" />
             <div className="caption">My dog</div>
           </div>
           <div className="gallery-item">
-            <img src="/images/dingdang2.png" alt="My dog" />
+            <img src={withBasePath('/images/dingdang2.png')} alt="My dog" />
             <div className="caption">My dog</div>
           </div>
         </div>

@@ -1,7 +1,3 @@
-'use client';
-
-import { motion } from 'framer-motion';
-
 export interface NewsItem {
     date: string;
     content: string;
@@ -14,11 +10,7 @@ interface NewsProps {
 
 export default function News({ items, title = 'News' }: NewsProps) {
     return (
-        <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-        >
+        <section className="animate-fade-in">
             <h2 className="text-2xl font-serif font-bold text-primary mb-4">{title}</h2>
             <div className="space-y-3">
                 {items.map((item, index) => (
@@ -28,6 +20,6 @@ export default function News({ items, title = 'News' }: NewsProps) {
                     </div>
                 ))}
             </div>
-        </motion.section>
+        </section>
     );
 }

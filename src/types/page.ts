@@ -1,5 +1,5 @@
 export interface BasePageConfig {
-    type: 'about' | 'publication' | 'card' | 'text';
+    type: 'about' | 'publication' | 'card' | 'text' | 'pdf';
     title: string;
     description?: string;
 }
@@ -27,4 +27,10 @@ export interface CardItem {
 export interface CardPageConfig extends BasePageConfig {
     type: 'card';
     items: CardItem[];
+}
+
+export interface PdfPageConfig extends BasePageConfig {
+    type: 'pdf';
+    source: string;
+    download_filename?: string;
 }

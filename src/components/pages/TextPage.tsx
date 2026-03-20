@@ -6,6 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { TextPageConfig } from '@/types/page';
 import AmChartsMap from './AmChartsMap';
+import { withBasePath } from '@/lib/basePath';
 
 interface TextPageProps {
     config: TextPageConfig;
@@ -66,6 +67,9 @@ export default function TextPage({ config, content, embedded = false, slug }: Te
                             <blockquote className="border-l-4 border-accent/50 pl-4 italic my-4 text-neutral-600 dark:text-neutral-500">
                                 {children}
                             </blockquote>
+                        ),
+                        img: ({ src, alt, ...props }) => (
+                            <img {...props} src={withBasePath(String(src || ''))} alt={alt || ''} />
                         ),
                         strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
                         em: ({ children }) => <em className="italic text-neutral-600 dark:text-neutral-500">{children}</em>,

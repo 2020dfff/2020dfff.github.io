@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import { withBasePath } from '@/lib/basePath';
 import {
     EnvelopeIcon,
     AcademicCapIcon,
@@ -13,6 +13,37 @@ import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Github, Linkedin, Pin } from 'lucide-react';
 import { SiteConfig } from '@/lib/config';
+
+// ClustrMaps visitor widget (3D globe)
+function ClustrMapsWidget() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const injectedRef = useRef(false);
+
+    useEffect(() => {
+        if (injectedRef.current) return;
+        injectedRef.current = true;
+
+        const container = containerRef.current;
+        if (!container) return;
+
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.id = 'clstr_globe';
+        script.src = 'https://clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY';
+        container.appendChild(script);
+    }, []);
+
+    return (
+        <div className="mb-6">
+            <h3 className="font-semibold text-primary mb-3 text-center text-sm">Visitors</h3>
+            <div
+                ref={containerRef}
+                className="rounded-lg"
+                style={{ minHeight: '280px', width: '100%', textAlign: 'center' }}
+            />
+        </div>
+    );
+}
 
 // Custom ORCID icon component
 const OrcidIcon = ({ className }: { className?: string }) => (
@@ -103,21 +134,18 @@ export default function Profile({ author, social, features, researchInterests }:
     ];
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="sticky top-8"
+        <div
+            className="sticky top-8 animate-fade-in"
         >
             {/* Profile Image */}
             <div className="w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
-                <Image
-                    src={author.avatar}
+                <img
+                    src={withBasePath(author.avatar)}
                     alt={author.name}
                     width={256}
                     height={256}
                     className="w-full h-full object-cover object-[32%_center]"
-                    priority
+                    loading="eager"
                 />
             </div>
 
@@ -313,6 +341,9 @@ export default function Profile({ author, social, features, researchInterests }:
                 </div>
             )}
 
+            {/* ClustrMaps Visitors Widget */}
+            <ClustrMapsWidget />
+
             {/* Like Button */}
             {features.enable_likes && (
                 <div className="flex justify-center">
@@ -351,6 +382,6 @@ export default function Profile({ author, social, features, researchInterests }:
                     </div>
                 </div>
             )}
-        </motion.div>
+        </div>
     );
 }
