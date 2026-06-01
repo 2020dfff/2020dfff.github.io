@@ -16,7 +16,7 @@ set -e
 # ============================================================
 NUS_USER="yfei11"
 NUS_HOST="stu.comp.nus.edu.sg"
-NUS_PATH="~/public_html"
+NUS_PATH="/home/${NUS_USER}/public_html"
 BASE_PATH="/~yfei11"
 OUT_DIR="out"
 
