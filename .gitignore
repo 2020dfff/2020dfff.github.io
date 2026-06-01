@@ -45,6 +45,7 @@ next-env.d.ts
 
 # local deployment notes/scripts
 deploy_nus.sh
+nus_deploy.sh
 README_NUS_DEPLOYMENT.md
 MIGRATION_PLAN.md
 MIGRATION_COMPLETE.md
