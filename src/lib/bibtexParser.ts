@@ -56,8 +56,10 @@ export function parseBibTeX(bibtexContent: string): Publication[] {
     // Parse selected field (convert string to boolean)
     const selected = tags.selected === 'true' || tags.selected === 'yes';
     
-    // Parse preview field (remove braces if present)
+    // Parse preview fields. `preview` is a local file under public/papers; previewUrl
+    // and thumbnailUrl can point to a public paper figure URL.
     const preview = tags.preview?.replace(/[{}]/g, '');
+    const previewUrl = tags.previewurl || tags.previewUrl || tags.thumbnailurl || tags.thumbnailUrl || tags.figureurl || tags.figureUrl;
     
     // Create publication object
     const publication: Publication = {
@@ -85,9 +87,12 @@ export function parseBibTeX(bibtexContent: string): Publication[] {
       description: cleanBibTeXString(tags.description || tags.note),
       selected,
       preview,
+      previewUrl: cleanBibTeXString(previewUrl) || undefined,
+      thumbnailUrl: cleanBibTeXString(tags.thumbnailurl || tags.thumbnailUrl) || undefined,
+      badge: cleanBibTeXString(tags.badge) || undefined,
       
       // Store original BibTeX (excluding custom fields)
-      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'description', 'keywords', 'code']),
+      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'previewurl', 'thumbnailurl', 'figureurl', 'badge', 'description', 'keywords', 'code']),
     };
     
     // Clean up undefined fields

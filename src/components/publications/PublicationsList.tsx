@@ -56,6 +56,16 @@ export default function PublicationsList({ config, publications, embedded = fals
         });
     }, [publications, searchQuery, selectedYear, selectedType]);
 
+    const getPublicationBadge = (pub: Publication) => {
+        return pub.badge || 'PAPER';
+    };
+
+    const getPublicationPreviewSrc = (pub: Publication) => {
+        if (pub.previewUrl || pub.thumbnailUrl) return pub.previewUrl || pub.thumbnailUrl;
+        if (pub.preview) return withBasePath(`/papers/${pub.preview}`);
+        return null;
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -197,18 +207,24 @@ export default function PublicationsList({ config, publications, embedded = fals
                             className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
                         >
                             <div className="flex flex-col md:flex-row gap-6">
-                                {pub.preview && (
-                                    <div className="w-full md:w-48 flex-shrink-0">
-                                        <div className="aspect-video md:aspect-[4/3] relative rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                                <div className="w-full md:w-48 flex-shrink-0">
+                                    <div className="aspect-video md:aspect-[4/3] relative rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800">
+                                        {getPublicationPreviewSrc(pub) ? (
                                             <img
-                                                src={withBasePath(`/papers/${pub.preview}`)}
+                                                src={getPublicationPreviewSrc(pub) || ''}
                                                 alt={pub.title}
                                                 className="absolute inset-0 w-full h-full object-cover"
                                                 loading="lazy"
+                                                referrerPolicy="no-referrer"
                                             />
-                                        </div>
+                                        ) : (
+                                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-accent/10 via-neutral-50 to-neutral-100 dark:from-accent/15 dark:via-neutral-800 dark:to-neutral-900">
+                                                <span className="text-2xl font-serif font-bold text-accent">{getPublicationBadge(pub)}</span>
+                                                <span className="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">{pub.year}</span>
+                                            </div>
+                                        )}
                                     </div>
-                                )}
+                                </div>
                                 <div className="flex-grow">
                                     <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
                                         {pub.title}
@@ -287,50 +303,51 @@ export default function PublicationsList({ config, publications, embedded = fals
                                         )}
                                     </div>
 
-                                    <AnimatePresence>
-                                        {expandedAbstractId === pub.id && pub.abstract ? (
-                                            <motion.div
-                                                key="abstract"
-                                                initial={{ opacity: 0, height: 0 }}
-                                                animate={{ opacity: 1, height: 'auto' }}
-                                                exit={{ opacity: 0, height: 0 }}
-                                                className="overflow-hidden mt-4"
-                                            >
-                                                <div className="bg-neutral-50 dark:bg-neutral-800 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
-                                                    <p className="text-sm text-neutral-600 dark:text-neutral-500 leading-relaxed">
-                                                        {pub.abstract}
-                                                    </p>
-                                                </div>
-                                            </motion.div>
-                                        ) : null}
-                                        {expandedBibtexId === pub.id && pub.bibtex ? (
-                                            <motion.div
-                                                key="bibtex"
-                                                initial={{ opacity: 0, height: 0 }}
-                                                animate={{ opacity: 1, height: 'auto' }}
-                                                exit={{ opacity: 0, height: 0 }}
-                                                className="overflow-hidden mt-4"
-                                            >
-                                                <div className="relative bg-neutral-50 dark:bg-neutral-800 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
-                                                    <pre className="text-xs text-neutral-600 dark:text-neutral-500 overflow-x-auto whitespace-pre-wrap font-mono">
-                                                        {pub.bibtex}
-                                                    </pre>
-                                                    <button
-                                                        onClick={() => {
-                                                            navigator.clipboard.writeText(pub.bibtex || '');
-                                                            // Optional: Show copied feedback
-                                                        }}
-                                                        className="absolute top-2 right-2 p-1.5 rounded-md bg-white dark:bg-neutral-700 text-neutral-500 hover:text-accent shadow-sm border border-neutral-200 dark:border-neutral-600 transition-colors"
-                                                        title="Copy to clipboard"
-                                                    >
-                                                        <ClipboardDocumentIcon className="h-4 w-4" />
-                                                    </button>
-                                                </div>
-                                            </motion.div>
-                                        ) : null}
-                                    </AnimatePresence>
                                 </div>
                             </div>
+
+                            {/* Full-width expansion — aligns with the entire card, not just the text column */}
+                            <AnimatePresence>
+                                {expandedAbstractId === pub.id && pub.abstract ? (
+                                    <motion.div
+                                        key="abstract"
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="overflow-hidden mt-4"
+                                    >
+                                        <div className="bg-neutral-50 dark:bg-neutral-800 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
+                                            <p className="text-sm text-neutral-600 dark:text-neutral-500 leading-relaxed">
+                                                {pub.abstract}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                ) : null}
+                                {expandedBibtexId === pub.id && pub.bibtex ? (
+                                    <motion.div
+                                        key="bibtex"
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="overflow-hidden mt-4"
+                                    >
+                                        <div className="relative bg-neutral-50 dark:bg-neutral-800 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
+                                            <pre className="text-xs text-neutral-600 dark:text-neutral-500 overflow-x-auto whitespace-pre-wrap font-mono">
+                                                {pub.bibtex}
+                                            </pre>
+                                            <button
+                                                onClick={() => {
+                                                    navigator.clipboard.writeText(pub.bibtex || '');
+                                                }}
+                                                className="absolute top-2 right-2 p-1.5 rounded-md bg-white dark:bg-neutral-700 text-neutral-500 hover:text-accent shadow-sm border border-neutral-200 dark:border-neutral-600 transition-colors"
+                                                title="Copy to clipboard"
+                                            >
+                                                <ClipboardDocumentIcon className="h-4 w-4" />
+                                            </button>
+                                        </div>
+                                    </motion.div>
+                                ) : null}
+                            </AnimatePresence>
                         </motion.div>
                     ))
                 )}

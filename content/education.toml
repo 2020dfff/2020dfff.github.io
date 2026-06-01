@@ -7,21 +7,25 @@ title = "Master of Computing"
 subtitle = "Computer Science, National University of Singapore"
 date = "Aug 2023 - May 2025"
 content = "Overall GPA: 3.92\nRelevant Courses: Advanced Computer Networks, Database Security, Distributed System, Knowledge Discovery and Data Mining."
+logoText = "NUS"
 
 [[items]]
 title = "Bachelor of Engineering"
 subtitle = "Information Security, Shanghai Jiao Tong University"
 date = "Sep 2019 - Jun 2023"
 content = "Major GPA: 3.74\nA courses: Modern Number Theory, Information Security Innovation, Operating System, Windows Security, Data Mining and 20 others."
+logoText = "SJTU"
 
 [[items]]
 title = "Summer Semester"
 subtitle = "Computer Engineering, University of California, Irvine"
 date = "Jun 2022 - Sep 2022"
 content = "GPA: 4.0"
+logoText = "UCI"
 
 [[items]]
 title = "Huaiyin High School"
 subtitle = "Huaiyin High School"
 date = "Sep 2016 - Jun 2019"
 content = "2019 College Entrance Exam: 415/480 (top 0.01%)"
+logoText = "HHS"
