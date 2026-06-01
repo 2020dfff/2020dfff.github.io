@@ -1,19 +1,35 @@
 [[news]]
+date = "2025-12"
+content = "🏢 Finished my internship at Huawei Singapore."
+
+[[news]]
+date = "2025-08"
+content = "🚀 Started my PhD journey at NUS."
+
+[[news]]
+date = "2025-07"
+content = "✈️ Attended SIGIR'25 — my first SIGIR."
+
+[[news]]
+date = "2025-06"
+content = "🎉 Our paper \"ThriftLLM\" was accepted by VLDB'25!"
+
+[[news]]
 date = "2025-04"
-content = "🎉 Our paper accepted by SIGIR'25!"
+content = "🎉 Our paper was accepted by SIGIR'25!"
 
 [[news]]
 date = "2025-03"
-content = "🎉 NUS 25Fall PhD offer, New journey!"
+content = "🚀 Received my NUS PhD offer (2025 Fall)."
 
 [[news]]
 date = "2024-05"
-content = "🎉 Started a new Internship at Shanghai AI Lab!"
+content = "🏢 Started an internship at Shanghai AI Lab."
 
 [[news]]
 date = "2023-08"
-content = "🎓 Started my master journey at NUS SoC!"
+content = "🎓 Started my master's at NUS SoC."
 
 [[news]]
 date = "2023-06"
-content = "🎓 Graduated from SJTU with outstanding graduate award!"
+content = "🎓 Graduated from SJTU with the Outstanding Graduate award."

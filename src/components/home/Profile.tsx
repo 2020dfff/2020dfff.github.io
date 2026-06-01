@@ -14,85 +14,87 @@ import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Github, Linkedin, Pin } from 'lucide-react';
 import { SiteConfig } from '@/lib/config';
 
-// ClustrMaps visitor widget (3D globe).
-// The ClustrMaps CDN is known to be slow and occasionally unreachable, so we:
-//   1. Defer script injection until the widget scrolls into view (IntersectionObserver)
-//   2. Show a skeleton/spinner while loading
-//   3. Watch for DOM mutations to detect successful render
-//   4. Fall back to a friendly message if it errors or hangs past 10s
+// Visitor globe widget (real visitor map).
+// ClustrMaps rebranded to MapMyVisitors and let clustrmaps.com lapse (its DNS now
+// fails globally), which is why the old embed stopped rendering. The same widget —
+// and its full visitor history — lives on mapmyvisitors.com under the same token.
+// globe.js locates itself by looking for a <script id="mmvst_globe"> in the page
+// and inserts the widget after it. It also waits for window.load before showing the
+// globe; in React that event has often already fired, so we reveal the inserted DOM
+// once it appears instead of leaving the widget hidden forever.
+// Current widget: new MapMyVisitors account (yfei11@u.nus.edu), counting from 2026-06.
+// Old ClustrMaps token kept for reference in case its pre-migration history is ever
+// recoverable — clustrmaps.com's DNS is dead and the token returns no data on
+// mapmyvisitors.com, so its records appear lost:
+//   d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY
+const VISITOR_GLOBE_SRC =
+    'https://mapmyvisitors.com/globe.js?d=-BWnH7O41AjBdrDoY4JAJqBxHOf9ymPoECzpb8wcKwc';
+
 function ClustrMapsWidget() {
     const containerRef = useRef<HTMLDivElement>(null);
     const scriptInjectedRef = useRef(false);
-    const [status, setStatus] = useState<'idle' | 'loading' | 'loaded' | 'error'>('idle');
+    const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
 
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
 
-        let intersectionObserver: IntersectionObserver | null = null;
         let mutationObserver: MutationObserver | null = null;
         let timeoutId: number | null = null;
 
-        const inject = () => {
-            if (scriptInjectedRef.current) return;
-            scriptInjectedRef.current = true;
-            setStatus('loading');
-
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.id = 'clstr_globe';
-            script.async = true;
-            script.src = 'https://clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY';
-            script.onerror = () => setStatus('error');
-            container.appendChild(script);
-
-            // Detect when ClustrMaps actually paints something visible into the container.
-            mutationObserver = new MutationObserver(() => {
-                const hasContent = Array.from(container.children).some(child =>
-                    child.tagName !== 'SCRIPT' && (child as HTMLElement).offsetHeight > 0
-                );
-                if (hasContent) {
-                    setStatus('loaded');
-                    mutationObserver?.disconnect();
-                    mutationObserver = null;
-                    if (timeoutId !== null) {
-                        window.clearTimeout(timeoutId);
-                        timeoutId = null;
-                    }
-                }
-            });
-            mutationObserver.observe(container, { childList: true, subtree: true });
-
-            // 10s budget — after that, surface a fallback instead of an endless spinner.
-            timeoutId = window.setTimeout(() => {
-                setStatus(prev => (prev === 'loaded' ? prev : 'error'));
-            }, 10000);
+        const finishLoading = () => {
+            if (timeoutId !== null) {
+                window.clearTimeout(timeoutId);
+                timeoutId = null;
+            }
+            mutationObserver?.disconnect();
+            mutationObserver = null;
+            setStatus('loaded');
         };
 
-        if (typeof IntersectionObserver !== 'undefined') {
-            intersectionObserver = new IntersectionObserver(
-                entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            inject();
-                            intersectionObserver?.disconnect();
-                            intersectionObserver = null;
-                        }
-                    });
-                },
-                // Begin loading well before the widget is fully in view so the globe
-                // is ready (or nearly so) by the time the user reaches it.
-                { rootMargin: '600px' }
-            );
-            intersectionObserver.observe(container);
-        } else {
-            inject();
+        const revealWidget = () => {
+            const widget = container.querySelector<HTMLElement>('.mmvst_outer');
+            const inner = container.querySelector<HTMLElement>('.mmvst_inner');
+            if (!widget || !inner) return false;
+
+            inner.style.display = 'block';
+            const globe = container.querySelector<HTMLElement>('.mmvst_globe');
+            if (globe) {
+                globe.style.visibility = 'visible';
+                globe.style.opacity = '1';
+                globe.style.transform = 'scale(1)';
+            }
+            finishLoading();
+            return true;
+        };
+
+        mutationObserver = new MutationObserver(() => {
+            revealWidget();
+        });
+        mutationObserver.observe(container, { childList: true, subtree: true });
+
+        if (!scriptInjectedRef.current) {
+            scriptInjectedRef.current = true;
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.id = 'mmvst_globe';
+            script.src = VISITOR_GLOBE_SRC;
+            script.onerror = () => {
+                setStatus('error');
+                mutationObserver?.disconnect();
+            };
+            container.appendChild(script);
         }
 
+        timeoutId = window.setTimeout(() => {
+            if (!revealWidget()) setStatus('error');
+        }, 12000);
+
         return () => {
-            intersectionObserver?.disconnect();
             mutationObserver?.disconnect();
             if (timeoutId !== null) window.clearTimeout(timeoutId);
+            container.innerHTML = '';
+            scriptInjectedRef.current = false;
         };
     }, []);
 
@@ -101,10 +103,10 @@ function ClustrMapsWidget() {
             <h3 className="font-semibold text-primary mb-3 text-center text-sm">Visitors</h3>
             <div
                 ref={containerRef}
-                className="rounded-lg relative flex items-center justify-center overflow-hidden"
-                style={{ minHeight: '280px', width: '100%', textAlign: 'center' }}
+                className="relative overflow-visible rounded-lg flex items-center justify-center"
+                style={{ minHeight: '250px', width: '100%', textAlign: 'center' }}
             >
-                {(status === 'idle' || status === 'loading') && (
+                {status === 'loading' && (
                     <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                         <div className="w-10 h-10 rounded-full border-2 border-neutral-200 dark:border-neutral-700 border-t-accent animate-spin" />
                         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Loading visitor map…</p>
