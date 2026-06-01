@@ -42,3 +42,10 @@ next-env.d.ts
 
 # wrangler
 .wrangler
+
+# local deployment notes/scripts
+deploy_nus.sh
+README_NUS_DEPLOYMENT.md
+MIGRATION_PLAN.md
+MIGRATION_COMPLETE.md
+QUICKSTART.md
