@@ -41,6 +41,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${config.site.favicon}`} type="image/svg+xml" />
+        {/* Warm up the ClustrMaps connection on page load so the visitor globe's
+            heavy script + assets load with minimal delay once it scrolls into view. */}
+        <link rel="dns-prefetch" href="https://clustrmaps.com" />
+        <link rel="preconnect" href="https://clustrmaps.com" />
         {/* Speed up font connections */}
         <link rel="dns-prefetch" href="https://google-fonts.jialeliu.com" />
         <link rel="preconnect" href="https://google-fonts.jialeliu.com" crossOrigin="" />

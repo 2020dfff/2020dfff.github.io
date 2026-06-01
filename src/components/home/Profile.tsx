@@ -14,23 +14,86 @@ import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Github, Linkedin, Pin } from 'lucide-react';
 import { SiteConfig } from '@/lib/config';
 
-// ClustrMaps visitor widget (3D globe)
+// ClustrMaps visitor widget (3D globe).
+// The ClustrMaps CDN is known to be slow and occasionally unreachable, so we:
+//   1. Defer script injection until the widget scrolls into view (IntersectionObserver)
+//   2. Show a skeleton/spinner while loading
+//   3. Watch for DOM mutations to detect successful render
+//   4. Fall back to a friendly message if it errors or hangs past 10s
 function ClustrMapsWidget() {
     const containerRef = useRef<HTMLDivElement>(null);
-    const injectedRef = useRef(false);
+    const scriptInjectedRef = useRef(false);
+    const [status, setStatus] = useState<'idle' | 'loading' | 'loaded' | 'error'>('idle');
 
     useEffect(() => {
-        if (injectedRef.current) return;
-        injectedRef.current = true;
-
         const container = containerRef.current;
         if (!container) return;
 
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.id = 'clstr_globe';
-        script.src = 'https://clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY';
-        container.appendChild(script);
+        let intersectionObserver: IntersectionObserver | null = null;
+        let mutationObserver: MutationObserver | null = null;
+        let timeoutId: number | null = null;
+
+        const inject = () => {
+            if (scriptInjectedRef.current) return;
+            scriptInjectedRef.current = true;
+            setStatus('loading');
+
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.id = 'clstr_globe';
+            script.async = true;
+            script.src = 'https://clustrmaps.com/globe.js?d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY';
+            script.onerror = () => setStatus('error');
+            container.appendChild(script);
+
+            // Detect when ClustrMaps actually paints something visible into the container.
+            mutationObserver = new MutationObserver(() => {
+                const hasContent = Array.from(container.children).some(child =>
+                    child.tagName !== 'SCRIPT' && (child as HTMLElement).offsetHeight > 0
+                );
+                if (hasContent) {
+                    setStatus('loaded');
+                    mutationObserver?.disconnect();
+                    mutationObserver = null;
+                    if (timeoutId !== null) {
+                        window.clearTimeout(timeoutId);
+                        timeoutId = null;
+                    }
+                }
+            });
+            mutationObserver.observe(container, { childList: true, subtree: true });
+
+            // 10s budget — after that, surface a fallback instead of an endless spinner.
+            timeoutId = window.setTimeout(() => {
+                setStatus(prev => (prev === 'loaded' ? prev : 'error'));
+            }, 10000);
+        };
+
+        if (typeof IntersectionObserver !== 'undefined') {
+            intersectionObserver = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            inject();
+                            intersectionObserver?.disconnect();
+                            intersectionObserver = null;
+                        }
+                    });
+                },
+                // Begin loading well before the widget is fully in view so the globe
+                // is ready (or nearly so) by the time the user reaches it.
+                { rootMargin: '600px' }
+            );
+            intersectionObserver.observe(container);
+        } else {
+            inject();
+        }
+
+        return () => {
+            intersectionObserver?.disconnect();
+            mutationObserver?.disconnect();
+            if (timeoutId !== null) window.clearTimeout(timeoutId);
+        };
     }, []);
 
     return (
@@ -38,9 +101,23 @@ function ClustrMapsWidget() {
             <h3 className="font-semibold text-primary mb-3 text-center text-sm">Visitors</h3>
             <div
                 ref={containerRef}
-                className="rounded-lg"
+                className="rounded-lg relative flex items-center justify-center overflow-hidden"
                 style={{ minHeight: '280px', width: '100%', textAlign: 'center' }}
-            />
+            >
+                {(status === 'idle' || status === 'loading') && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                        <div className="w-10 h-10 rounded-full border-2 border-neutral-200 dark:border-neutral-700 border-t-accent animate-spin" />
+                        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Loading visitor map…</p>
+                    </div>
+                )}
+                {status === 'error' && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+                        <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                            Visitor map is temporarily unavailable.
+                        </p>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
@@ -78,7 +155,7 @@ export default function Profile({ author, social, features, researchInterests }:
     useEffect(() => {
         if (!features.enable_likes) return;
 
-        const userHasLiked = localStorage.getItem('jiale-website-user-liked');
+        const userHasLiked = localStorage.getItem('yangfei-website-user-liked');
         if (userHasLiked === 'true') {
             setHasLiked(true);
         }
@@ -89,11 +166,11 @@ export default function Profile({ author, social, features, researchInterests }:
         setHasLiked(newLikedState);
 
         if (newLikedState) {
-            localStorage.setItem('jiale-website-user-liked', 'true');
+            localStorage.setItem('yangfei-website-user-liked', 'true');
             setShowThanks(true);
             setTimeout(() => setShowThanks(false), 2000);
         } else {
-            localStorage.removeItem('jiale-website-user-liked');
+            localStorage.removeItem('yangfei-website-user-liked');
             setShowThanks(false);
         }
     };

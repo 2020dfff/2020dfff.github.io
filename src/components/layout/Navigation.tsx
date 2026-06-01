@@ -118,7 +118,7 @@ export default function Navigation({ items, siteTitle, enableOnePageMode }: Navi
                           ? activeHash === `#${item.target}` || (!activeHash && item.target === 'about')
                           : (item.href === '/'
                             ? pathname === '/'
-                            : pathname.startsWith(item.href));
+                            : pathname === item.href || pathname.startsWith(item.href + '/'));
 
                         const href = enableOnePageMode
                           ? `/#${item.target}`
@@ -196,7 +196,7 @@ export default function Navigation({ items, siteTitle, enableOnePageMode }: Navi
                         ? (item.href === '/' ? pathname === '/' && !activeHash : activeHash === `#${item.target}`)
                         : (item.href === '/'
                           ? pathname === '/'
-                          : pathname.startsWith(item.href));
+                          : pathname === item.href || pathname.startsWith(item.href + '/'));
 
                       const href = enableOnePageMode
                         ? (item.href === '/' ? '/' : `/#${item.target}`)

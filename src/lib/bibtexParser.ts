@@ -140,9 +140,10 @@ function parseAuthors(authorsStr: string): Array<{ name: string; isHighlighted?:
         name = `${parts[1]} ${parts[0]}`;
       }
       
-      // Check if this is Jiale Liu (to highlight)
-      const isHighlighted = name.toLowerCase().includes('jiale liu') || 
-                          name.toLowerCase().includes('liu jiale');
+      // Highlight the site owner (Yang Fei / 费扬). Names are already normalized to "First Last"
+      // form above (e.g. "Fei, Yang" → "Yang Fei"), so a single check suffices.
+      const lower = name.toLowerCase();
+      const isHighlighted = lower.includes('yang fei') || lower.includes('fei yang');
       
       return {
         name: cleanBibTeXString(name),
