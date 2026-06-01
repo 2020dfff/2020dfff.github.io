@@ -1,3 +1,18 @@
 _site/
 push.sh
 .DS_Store
+
+# Local deployment files
+README_NUS_DEPLOYMENT.md
+nus_deploy.sh
+deploy_nus.sh
+MIGRATION_PLAN.md
+MIGRATION_COMPLETE.md
+QUICKSTART.md
+
+# Local build artifacts
+node_modules/
+.next/
+out/
+next-env.d.ts
+tsconfig.tsbuildinfo
