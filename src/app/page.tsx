@@ -11,6 +11,7 @@ import CardPage from '@/components/pages/CardPage';
 
 import { Publication } from '@/types/publication';
 import { BasePageConfig, PublicationPageConfig, TextPageConfig, CardPageConfig } from '@/types/page';
+import { FootprintPoint, FootprintsConfig } from '@/types/footprint';
 
 // Define types for section config
 interface SectionConfig {
@@ -28,7 +29,7 @@ interface SectionConfig {
 type PageData =
   | { type: 'about', id: string, sections: SectionConfig[] }
   | { type: 'publication', id: string, config: PublicationPageConfig, publications: Publication[] }
-  | { type: 'text', id: string, config: TextPageConfig, content: string }
+  | { type: 'text', id: string, config: TextPageConfig, content: string, footprintPoints?: FootprintPoint[] }
   | { type: 'card', id: string, config: CardPageConfig };
 
 export default function Home() {
@@ -113,7 +114,10 @@ export default function Home() {
             type: 'text',
             id: item.target,
             config: textConfig,
-            content: getMarkdownContent(textConfig.source)
+            content: getMarkdownContent(textConfig.source),
+            footprintPoints: item.target === 'misc'
+              ? getTomlContent<FootprintsConfig>('footprints.toml')?.points
+              : undefined
           } as PageData;
         } else if (pageConfig.type === 'card') {
           return {
@@ -226,6 +230,8 @@ export default function Home() {
                   config={page.config}
                   content={page.content}
                   embedded={true}
+                  slug={page.id}
+                  footprintPoints={page.footprintPoints}
                 />
               )}
               {page.type === 'card' && (
@@ -241,4 +247,3 @@ export default function Home() {
     </div>
   );
 }
-

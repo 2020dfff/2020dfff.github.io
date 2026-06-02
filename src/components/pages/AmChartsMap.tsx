@@ -1,10 +1,80 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { withBasePath } from '@/lib/basePath';
+import { FootprintImage, FootprintPoint } from '@/types/footprint';
 
-export default function AmChartsMap() {
+interface AmChartsMapProps {
+  points?: FootprintPoint[];
+}
+
+const fallbackPoints: FootprintPoint[] = [
+  {
+    city: 'Singapore',
+    country: 'Singapore',
+    latitude: 1.3521,
+    longitude: 103.8198,
+    image: '/images/gallery/singapore-1.JPG',
+    caption: 'Gallery preview.',
+    category: 'City',
+  },
+];
+
+function getPointImages(point: FootprintPoint): FootprintImage[] {
+  const images = point.images?.length ? point.images : point.image ? [point.image] : [];
+  return images
+    .filter(Boolean)
+    .map((image) => typeof image === 'string' ? { src: image } : image)
+    .filter((image) => Boolean(image.src));
+}
+
+function getImageShape(width: number, height: number): 'portrait' | 'landscape' {
+  return height / width > 1.75 ? 'portrait' : 'landscape';
+}
+
+function canPreviewPoint(point: FootprintPoint) {
+  return point.preview !== false && getPointImages(point).length > 0;
+}
+
+export default function AmChartsMap({ points = fallbackPoints }: AmChartsMapProps) {
   const chartDivRef = useRef<HTMLDivElement>(null);
   const rootRef = useRef<any>(null); // 保存 root 实例的引用
+  const mapPoints = useMemo(() => Array.isArray(points) && points.length > 0 ? points : fallbackPoints, [points]);
+  const initialPreviewPoint = useMemo(
+    () => mapPoints.find(canPreviewPoint) || fallbackPoints[0],
+    [mapPoints],
+  );
+  const [activePoint, setActivePoint] = useState<FootprintPoint>(initialPreviewPoint);
+  const [imageShapes, setImageShapes] = useState<Record<string, 'portrait' | 'landscape'>>({});
+  const displayPoint = canPreviewPoint(activePoint) ? activePoint : initialPreviewPoint;
+  const pointImages = getPointImages(displayPoint);
+  const displayImage = withBasePath(pointImages[0]?.src || fallbackPoints[0].image || '');
+  const imageShape = imageShapes[displayImage] || 'landscape';
+  const hasMultipleImages = pointImages.length > 1;
+
+  useEffect(() => {
+    setActivePoint(initialPreviewPoint);
+  }, [initialPreviewPoint]);
+
+  useEffect(() => {
+    if (!displayImage) return;
+    if (imageShapes[displayImage]) return;
+
+    let cancelled = false;
+    const image = new Image();
+    image.onload = () => {
+      if (cancelled) return;
+      setImageShapes((current) => ({
+        ...current,
+        [displayImage]: getImageShape(image.naturalWidth, image.naturalHeight),
+      }));
+    };
+    image.src = displayImage;
+
+    return () => {
+      cancelled = true;
+    };
+  }, [displayImage, imageShapes]);
 
   useEffect(() => {
     console.log('AmChartsMap: Component mounted');
@@ -158,14 +228,15 @@ export default function AmChartsMap() {
             SG: '2023 – now',
             US: 'Jan 2024, Feb 2025',
             MX: 'Dec 2023',
-            JP: 'Apr 2024, Nov 2024',
+            JP: 'Apr 2024, Nov 2024, May 2026',
             DE: 'Jul 2019',
             MY: '2023, 2024, 2025',
             TH: '2025',
             ID: 'May 2025',
             GB: '',
             IT: 'Jul 2025',
-            AU: ''
+            AU: '',
+            AE: ''
           };
 
           // 创建统一的访问国家系列（浅蓝色）
@@ -185,46 +256,10 @@ export default function AmChartsMap() {
             return '{name}\n' + visitedData[id];
           });
 
-          const cityMarkers = [
-            { title: 'Los Angeles', latitude: 34.0522, longitude: -118.2437 },
-            { title: 'San Francisco', latitude: 37.7749, longitude: -122.4194 },
-            { title: 'San Diego', latitude: 32.7157, longitude: -117.1611 },
-            { title: 'Tijuana', latitude: 32.5149, longitude: -117.0382 },
-            { title: 'Mexico City', latitude: 19.4326, longitude: -99.1332 },
-            { title: 'Guanajuato', latitude: 21.0181, longitude: -101.2583 },
-            { title: 'San Miguel', latitude: 20.9144, longitude: -100.7431 },
-            { title: 'Singapore', latitude: 1.3521, longitude: 103.8198 },
-            { title: 'Semporna', latitude: 4.4818, longitude: 118.611 },
-            { title: 'Shanghai', latitude: 31.2304, longitude: 121.4737 },
-            { title: 'Beijing', latitude: 39.9042, longitude: 116.4074 },
-            { title: 'Lhasa', latitude: 29.652, longitude: 91.1721 },
-            { title: 'Xining', latitude: 36.6171, longitude: 101.7782 },
-            { title: 'Chengdu', latitude: 30.5728, longitude: 104.0668 },
-            { title: 'Wuhan', latitude: 30.5928, longitude: 114.3055 },
-            { title: 'Chongqing', latitude: 29.563, longitude: 106.5516 },
-            { title: 'Changsha', latitude: 28.2282, longitude: 112.9388 },
-            { title: 'Hong Kong', latitude: 22.3193, longitude: 114.1694 },
-            { title: 'Taipei', latitude: 25.0330, longitude: 121.5654 },
-            { title: "Huai'an", latitude: 33.5785, longitude: 119.0302 },
-            { title: 'Frankfurt', latitude: 50.1109, longitude: 8.6821 },
-            { title: 'Hanover', latitude: 52.3759, longitude: 9.732 },
-            { title: 'Berlin', latitude: 52.52, longitude: 13.405 },
-            { title: 'Hamburg', latitude: 53.5511, longitude: 9.9937 },
-            { title: 'Milan', latitude: 45.4642, longitude: 9.1900 },
-            { title: 'Venice', latitude: 45.4408, longitude: 12.3155 },
-            { title: 'Padua', latitude: 45.4064, longitude: 11.8768 },
-            { title: 'Bolzano', latitude: 46.4983, longitude: 11.3548 },
-            { title: 'Kuala Lumpur', latitude: 3.139, longitude: 101.6869 },
-            { title: 'Johor Bahru', latitude: 1.4927, longitude: 103.7414 },
-            { title: 'Penang', latitude: 5.4164, longitude: 100.3327 },
-            { title: 'Surabaya', latitude: -7.2575, longitude: 112.7521 },
-            { title: 'Phuket', latitude: 7.8804, longitude: 98.3923 },
-            { title: 'Tokyo', latitude: 35.6764, longitude: 139.65 },
-            { title: 'Osaka', latitude: 34.6937, longitude: 135.5023 },
-            { title: 'Kyoto', latitude: 35.0116, longitude: 135.7681 },
-            { title: 'Kobe', latitude: 34.6901, longitude: 135.1955 },
-            { title: 'Yokohama', latitude: 35.4437, longitude: 139.638 }
-          ];
+          const cityMarkers = mapPoints.map((point) => ({
+            ...point,
+            title: point.city,
+          }));
 
           var citySeries = chart.series.push(
             am5map.MapPointSeries.new(root, {
@@ -233,15 +268,30 @@ export default function AmChartsMap() {
             })
           );
 
-          citySeries.bullets.push(function (root: any, dataItem: any) {
+          citySeries.bullets.push(function (root: any, _series: any, dataItem: any) {
+            const point = (dataItem.dataContext || dataItem.get('dataContext')) as FootprintPoint & { title: string };
+            const circle = am5.Circle.new(root, {
+              radius: 5,
+              tooltipText: '{title}',
+              fill: am5.color(0xcc0000),
+              stroke: am5.color(0xffffff),
+              strokeWidth: 1,
+              interactive: true,
+              cursorOverStyle: 'pointer',
+            });
+
+            const activatePoint = () => {
+              if (canPreviewPoint(point)) {
+                setActivePoint(point);
+              }
+            };
+
+            circle.events.on('pointerover', activatePoint);
+            circle.events.on('pointerenter', activatePoint);
+            circle.events.on('click', activatePoint);
+
             return am5.Bullet.new(root, {
-              sprite: am5.Circle.new(root, {
-                radius: 5,
-                tooltipText: '{title}',
-                fill: am5.color(0xcc0000),
-                stroke: am5.color(0xffffff),
-                strokeWidth: 1
-              })
+              sprite: circle
             });
           });
 
@@ -269,19 +319,72 @@ export default function AmChartsMap() {
         rootRef.current = null;
       }
     };
-  }, []);
+  }, [mapPoints]);
 
   return (
-    <div
-      ref={chartDivRef}
-      style={{
-        width: '100%',
-        height: '600px',
-        margin: '20px 0',
-        borderRadius: '8px',
-        overflow: 'hidden',
-        boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
-      }}
-    />
+    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_260px] my-5">
+      <div
+        ref={chartDivRef}
+        className="min-h-[420px] lg:min-h-[600px] rounded-lg overflow-hidden shadow-sm border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
+      />
+      <aside className="relative min-h-[360px] lg:min-h-[600px] rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 shadow-sm overflow-hidden">
+        {hasMultipleImages ? (
+          <div className="absolute inset-0 grid grid-rows-2 gap-1 bg-neutral-950 p-1">
+            {pointImages.slice(0, 2).map((image) => {
+              const imageSrc = withBasePath(image.src);
+              return (
+                <div key={imageSrc} className="relative overflow-hidden rounded bg-neutral-900">
+                  <img
+                    src={imageSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-55"
+                    loading="lazy"
+                  />
+                  <img
+                    src={imageSrc}
+                    alt={displayPoint.caption || displayPoint.city}
+                    className="relative w-full h-full object-contain p-1"
+                    loading="lazy"
+                  />
+                  {(image.category || image.caption) && (
+                    <div className="absolute left-2 top-2 rounded bg-black/45 px-2 py-1 text-xs font-medium text-white backdrop-blur">
+                      {image.category || image.caption}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="absolute inset-0">
+            {imageShape === 'landscape' && (
+              <img
+                src={displayImage}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-60"
+                loading="lazy"
+              />
+            )}
+            <img
+              key={displayImage}
+              src={displayImage}
+              alt={displayPoint.caption || displayPoint.city}
+              className={`relative w-full h-full ${imageShape === 'landscape' ? 'object-contain p-2' : 'object-cover'}`}
+              loading="lazy"
+            />
+          </div>
+        )}
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent p-4 pt-14">
+          <h3 className="text-lg font-semibold text-white leading-tight">{displayPoint.city}</h3>
+          {(displayPoint.country || (!hasMultipleImages && displayPoint.category)) && (
+            <p className="mt-1 text-sm text-white/75">
+              {[displayPoint.country, hasMultipleImages ? null : displayPoint.category].filter(Boolean).join(' · ')}
+            </p>
+          )}
+        </div>
+      </aside>
+    </div>
   );
 }

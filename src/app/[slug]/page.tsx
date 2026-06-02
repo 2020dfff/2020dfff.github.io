@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
+import { getPageConfig, getMarkdownContent, getBibtexContent, getTomlContent } from '@/lib/content';
 import { getConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
 import PublicationsList from '@/components/publications/PublicationsList';
@@ -13,6 +13,7 @@ import {
     CardPageConfig,
     PdfPageConfig
 } from '@/types/page';
+import { FootprintsConfig } from '@/types/footprint';
 
 import { Metadata } from 'next';
 
@@ -77,5 +78,8 @@ function PublicationPage({ config }: { config: PublicationPageConfig }) {
 
 function TextPageWrapper({ config, slug }: { config: TextPageConfig; slug: string }) {
     const content = getMarkdownContent(config.source);
-    return <TextPage config={config} content={content} slug={slug} />;
+    const footprints = slug === 'misc'
+        ? getTomlContent<FootprintsConfig>('footprints.toml')?.points
+        : undefined;
+    return <TextPage config={config} content={content} slug={slug} footprintPoints={footprints} />;
 }

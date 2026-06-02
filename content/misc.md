@@ -1,42 +1,68 @@
-# 📝 Hobbies
-
-- **Basketball**: I participate in several basketball teams in my high school, SJTU and NUS.
-- **Scuba Diving**: I finally got my AOW together with Enriched Air Diver at Apr 2025!
-
-<div class="photo-gallery">
-  <div class="gallery-column">
-    <div class="gallery-item">
-      <img src="/images/misc/basketball1.png" alt="Basketball">
-      <div class="caption">Basketball</div>
+<details class="collapsible-hobbies">
+  <summary>
+    <h1>📝 Hobbies <span class="collapsible-chevron">▾</span></h1>
+    <ul>
+      <li><strong>Basketball</strong>: I participate in several basketball teams in my high school, SJTU and NUS.</li>
+      <li><strong>Scuba Diving</strong>: I finally got my AOW together with Enriched Air Diver at Apr 2025!</li>
+    </ul>
+  </summary>
+  <div class="photo-gallery">
+    <div class="gallery-column">
+      <div class="gallery-item">
+        <img src="/images/misc/basketball1.png" alt="Basketball">
+        <div class="caption">Basketball</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/misc/basketball2.png" alt="Basketball">
+        <div class="caption">Basketball</div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <img src="/images/misc/basketball2.png" alt="Basketball">
-      <div class="caption">Basketball</div>
+    <div class="gallery-column">
+      <div class="gallery-item">
+        <img src="/images/misc/diving5.png" alt="Diving">
+        <div class="caption">Diving</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/misc/diving3.png" alt="Diving">
+        <div class="caption">Diving</div>
+      </div>
+    </div>
+    <div class="gallery-column">
+      <div class="gallery-item">
+        <img src="/images/misc/dingdang.png" alt="My dog">
+        <div class="caption">My dog</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/misc/dingdang2.png" alt="My dog">
+        <div class="caption">My dog</div>
+      </div>
     </div>
   </div>
-  <div class="gallery-column">
-    <div class="gallery-item">
-      <img src="/images/misc/diving5.png" alt="Diving">
-      <div class="caption">Diving</div>
-    </div>
-    <div class="gallery-item">
-      <img src="/images/misc/diving3.png" alt="Diving">
-      <div class="caption">Diving</div>
-    </div>
-  </div>
-  <div class="gallery-column">
-    <div class="gallery-item">
-      <img src="/images/misc/dingdang.png" alt="My dog">
-      <div class="caption">My dog</div>
-    </div>
-    <div class="gallery-item">
-      <img src="/images/misc/dingdang2.png" alt="My dog">
-      <div class="caption">My dog</div>
-    </div>
-  </div>
-</div>
+</details>
 
 <style>
+.collapsible-hobbies {
+  margin-bottom: 30px;
+}
+/* Only the heading + the two description lines live in the summary, so they stay
+   visible; the photos below are what expand/collapse. */
+.collapsible-hobbies > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.collapsible-hobbies > summary::-webkit-details-marker {
+  display: none;
+}
+.collapsible-chevron {
+  display: inline-block;
+  font-size: 1.5rem;
+  opacity: 0.5;
+  transition: transform 0.25s ease;
+}
+.collapsible-hobbies[open] > summary .collapsible-chevron {
+  transform: rotate(180deg);
+}
+
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -102,14 +128,17 @@
 # 🦾 Leadership & Experiences
 
 **College Student Work Office, President** (Fall 2019 – Present)
+
 - Led 50+ members in community service and academic initiatives
 - Organized 4 training courses with 2000+ trainees and 6 forums
 
 **Club Unions, Cadre** (Fall 2019 – Fall 2020)
+
 - Organized large-scale campus events (Loy Krathong Festival, Club Recruitment, Student Festival)
 - Accumulated over 1 million article readings
 
 **Volunteer Experience**
+
 - Vaccination Site Volunteer (Fall 2021)
 - Shanghai International Marathon Volunteer (Fall 2020, 2021)
 
@@ -118,4 +147,4 @@
 - **Languages**: Python, Java, C/C++, JavaScript, Go
 - **Frameworks**: PyTorch, NumPy, Pandas, Seaborn, NetworkX
 - **Tools**: Git, Docker, MySQL, MongoDB
-- **Languages**: Mandarin (Native) | English (TOEFL: 109, GRE: 322) | French (Beginner)
+- **Languages**: Mandarin (Native) | English (TOEFL: 109, GRE: 322)

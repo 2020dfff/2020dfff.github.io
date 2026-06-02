@@ -1,0 +1,481 @@
+# Gallery photos connected to red dots on the footprint map.
+# Replace placeholder images with files under public/images/gallery/.
+
+[[points]]
+city = "Los Angeles"
+country = "United States"
+latitude = 34.0522
+longitude = -118.2437
+image = "/images/gallery/los%20angeles.JPG"
+caption = "West coast light and long roads."
+category = "Travel"
+date = "2024"
+
+[[points]]
+city = "San Francisco"
+country = "United States"
+latitude = 37.7749
+longitude = -122.4194
+image = "/images/gallery/sanfrancisco.JPG"
+caption = "San Francisco street view."
+category = "Travel"
+
+[[points]]
+city = "San Diego"
+country = "United States"
+latitude = 32.7157
+longitude = -117.1611
+image = "/images/gallery/sandiego.JPG"
+caption = "San Diego coastline."
+category = "Travel"
+
+[[points]]
+city = "Tijuana"
+country = "Mexico"
+latitude = 32.5149
+longitude = -117.0382
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Mexico City"
+country = "Mexico"
+latitude = 19.4326
+longitude = -99.1332
+image = "/images/gallery/cdmx.JPG"
+caption = "Morning light in Mexico City."
+category = "Travel"
+
+[[points]]
+city = "Guanajuato"
+country = "Mexico"
+latitude = 21.0181
+longitude = -101.2583
+image = "/images/gallery/Guanajuato.JPG"
+caption = "Colorful streets in Guanajuato."
+category = "Travel"
+
+[[points]]
+city = "San Miguel"
+country = "Mexico"
+latitude = 20.9144
+longitude = -100.7431
+image = "/images/gallery/sanmiguel.JPG"
+caption = "Afternoon in San Miguel."
+category = "Travel"
+
+[[points]]
+city = "Singapore"
+country = "Singapore"
+latitude = 1.3521
+longitude = 103.8198
+image = "/images/gallery/singapore-1.JPG"
+caption = "City lights and humid evenings."
+category = "City"
+date = "2025"
+
+[[points.images]]
+src = "/images/gallery/singapore-1.JPG"
+category = "City"
+
+[[points.images]]
+src = "/images/gallery/singapore-2.JPG"
+category = "City"
+
+[[points]]
+city = "Semporna"
+country = "Malaysia"
+latitude = 4.4818
+longitude = 118.611
+image = "/images/gallery/semporna.JPG"
+caption = "Diving trip in Semporna."
+category = "Diving"
+date = "2025"
+
+[[points]]
+city = "Shanghai"
+country = "China"
+latitude = 31.2304
+longitude = 121.4737
+image = "/images/gallery/shanghai-1.JPEG"
+caption = "A familiar skyline from school years."
+category = "Campus"
+date = "2023"
+
+[[points.images]]
+src = "/images/gallery/shanghai-1.JPEG"
+category = "Campus"
+
+[[points.images]]
+src = "/images/gallery/shanghai-2.JPG"
+category = "Conference"
+
+[[points]]
+city = "Beijing"
+country = "China"
+latitude = 39.9042
+longitude = 116.4074
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Lhasa"
+country = "China"
+latitude = 29.652
+longitude = 91.1721
+image = "/images/gallery/lhasa.JPG"
+caption = "Night view in Lhasa."
+category = "Travel"
+
+[[points]]
+city = "Xining"
+country = "China"
+latitude = 36.6171
+longitude = 101.7782
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Chengdu"
+country = "China"
+latitude = 30.5728
+longitude = 104.0668
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Wuhan"
+country = "China"
+latitude = 30.5928
+longitude = 114.3055
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Chongqing"
+country = "China"
+latitude = 29.563
+longitude = 106.5516
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Changsha"
+country = "China"
+latitude = 28.2282
+longitude = 112.9388
+image = "/images/gallery/changsha.JPEG"
+caption = "Changsha city scene."
+category = "Travel"
+
+[[points]]
+city = "Beidahu"
+country = "China"
+latitude = 43.416
+longitude = 126.72
+image = "/images/gallery/beidahu.jpg"
+caption = "Snow day in Beidahu."
+category = "Skiing"
+
+[[points]]
+city = "Hong Kong"
+country = "China"
+latitude = 22.3193
+longitude = 114.1694
+image = "/images/gallery/hongkong-1.JPG"
+caption = "Hong Kong skyline."
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/hongkong-1.JPG"
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/hongkongconference-2.JPG"
+category = "Conference"
+
+[[points]]
+city = "Taipei"
+country = "Taiwan"
+latitude = 25.033
+longitude = 121.5654
+image = "/images/gallery/taibei-1.JPG"
+caption = "Taipei city walk."
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/taibei-1.JPG"
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/taibei-2.JPG"
+category = "Travel"
+
+[[points]]
+city = "Huai'an"
+country = "China"
+latitude = 33.5785
+longitude = 119.0302
+image = "/images/gallery/huaian.JPEG"
+caption = "Evening light in Huai'an."
+category = "Travel"
+
+[[points]]
+city = "Frankfurt"
+country = "Germany"
+latitude = 50.1109
+longitude = 8.6821
+image = "/images/gallery/frankfurt.jpg"
+caption = "Frankfurt skyline and summer light."
+category = "Travel"
+
+[[points]]
+city = "Hanover"
+country = "Germany"
+latitude = 52.3759
+longitude = 9.732
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Berlin"
+country = "Germany"
+latitude = 52.52
+longitude = 13.405
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Hamburg"
+country = "Germany"
+latitude = 53.5511
+longitude = 9.9937
+category = "Travel"
+preview = false
+
+[[points]]
+city = "Milan"
+country = "Italy"
+latitude = 45.4642
+longitude = 9.19
+image = "/images/gallery/milan-1.JPG"
+caption = "Milan city scene."
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/milan-1.JPG"
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/milan-2.JPG"
+category = "Travel"
+
+[[points]]
+city = "Venice"
+country = "Italy"
+latitude = 45.4408
+longitude = 12.3155
+image = "/images/gallery/venice.JPG"
+caption = "Venice canal view."
+category = "Travel"
+
+[[points]]
+city = "Padua"
+country = "Italy"
+latitude = 45.4064
+longitude = 11.8768
+image = "/images/gallery/padua-1.JPG"
+caption = "Conference trip preview."
+category = "Conference"
+date = "2025"
+
+[[points.images]]
+src = "/images/gallery/padua-1.JPG"
+category = "Conference"
+
+[[points.images]]
+src = "/images/gallery/padua-2.JPG"
+category = "Travel"
+
+[[points]]
+city = "Funes"
+country = "Italy"
+latitude = 46.645
+longitude = 11.725
+image = "/images/gallery/funes.JPG"
+caption = "Dolomites in Funes."
+category = "Travel"
+
+[[points]]
+city = "Ortisei"
+country = "Italy"
+latitude = 46.576
+longitude = 11.672
+image = "/images/gallery/ortisei.JPG"
+caption = "Dolomites near Ortisei."
+category = "Travel"
+
+[[points]]
+city = "Kuala Lumpur"
+country = "Malaysia"
+latitude = 3.139
+longitude = 101.6869
+image = "/images/gallery/kualalumpur.JPG"
+caption = "Kuala Lumpur evening."
+category = "Travel"
+
+[[points]]
+city = "Johor Bahru"
+country = "Malaysia"
+latitude = 1.4927
+longitude = 103.7414
+image = "/images/gallery/johorbahru.JPG"
+caption = "Johor Bahru street view."
+category = "Travel"
+
+[[points]]
+city = "Penang"
+country = "Malaysia"
+latitude = 5.4164
+longitude = 100.3327
+image = "/images/gallery/penang.JPG"
+caption = "Penang evening."
+category = "Travel"
+
+[[points]]
+city = "Surabaya"
+country = "Indonesia"
+latitude = -7.2575
+longitude = 112.7521
+image = "/images/gallery/surabaya.JPG"
+caption = "Morning in Surabaya."
+category = "Travel"
+
+[[points]]
+city = "Bali"
+country = "Indonesia"
+latitude = -8.3405
+longitude = 115.092
+image = "/images/gallery/bali.JPG"
+caption = "Bali coastline."
+category = "Travel"
+
+[[points]]
+city = "Phuket"
+country = "Thailand"
+latitude = 7.8804
+longitude = 98.3923
+image = "/images/gallery/phuket.JPG"
+caption = "Phuket coastline."
+category = "Travel"
+
+[[points]]
+city = "Tokyo"
+country = "Japan"
+latitude = 35.6764
+longitude = 139.65
+image = "/images/gallery/tokyo-1.JPG"
+caption = "Street corners, trains, and late-night walks."
+category = "Travel"
+date = "2024"
+
+[[points.images]]
+src = "/images/gallery/tokyo-1.JPG"
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/tokyo-2.JPG"
+category = "Travel"
+
+[[points]]
+city = "Osaka"
+country = "Japan"
+latitude = 34.6937
+longitude = 135.5023
+image = "/images/gallery/osaka.JPG"
+caption = "Osaka city scene."
+category = "Travel"
+
+[[points]]
+city = "Kyoto"
+country = "Japan"
+latitude = 35.0116
+longitude = 135.7681
+image = "/images/gallery/kyoto-1.JPG"
+caption = "A quiet Kyoto evening."
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/kyoto-1.JPG"
+category = "Travel"
+
+[[points.images]]
+src = "/images/gallery/kyoto-2.JPG"
+category = "Travel"
+
+[[points]]
+city = "Kobe"
+country = "Japan"
+latitude = 34.6901
+longitude = 135.1955
+image = "/images/gallery/kobe.JPG"
+caption = "Kobe city scene."
+category = "Travel"
+
+[[points]]
+city = "Yokohama"
+country = "Japan"
+latitude = 35.4437
+longitude = 139.638
+image = "/images/gallery/yokohama.JPG"
+caption = "Yokohama waterfront."
+category = "Travel"
+
+[[points]]
+city = "Sapporo"
+country = "Japan"
+latitude = 43.0667
+longitude = 141.35
+image = "/images/gallery/sapporo.JPG"
+caption = "Sapporo in May."
+category = "Travel"
+date = "May 2026"
+
+[[points]]
+city = "Hakodate"
+country = "Japan"
+latitude = 41.7687
+longitude = 140.7291
+image = "/images/gallery/hakodate.JPG"
+caption = "Hakodate view."
+category = "Travel"
+date = "May 2026"
+
+[[points]]
+city = "Biei"
+country = "Japan"
+latitude = 43.5883
+longitude = 142.4669
+image = "/images/gallery/biei-1.JPG"
+caption = "Biei landscape."
+category = "Travel"
+date = "May 2026"
+
+[[points]]
+city = "Asahikawa"
+country = "Japan"
+latitude = 43.7706
+longitude = 142.3649
+image = "/images/gallery/asahikawa.JPG"
+caption = "Asahikawa in May."
+category = "Travel"
+date = "May 2026"
+
+[[points]]
+city = "Dubai"
+country = "United Arab Emirates"
+latitude = 25.2048
+longitude = 55.2708
+image = "/images/gallery/uae.JPG"
+caption = "UAE trip."
+category = "Travel"

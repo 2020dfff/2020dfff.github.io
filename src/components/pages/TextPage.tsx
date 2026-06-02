@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
@@ -7,18 +8,20 @@ import remarkGfm from 'remark-gfm';
 import { TextPageConfig } from '@/types/page';
 import AmChartsMap from './AmChartsMap';
 import { withBasePath } from '@/lib/basePath';
+import { FootprintPoint } from '@/types/footprint';
 
 interface TextPageProps {
     config: TextPageConfig;
     content: string;
     embedded?: boolean;
     slug?: string;
+    footprintPoints?: FootprintPoint[];
 }
 
-export default function TextPage({ config, content, embedded = false, slug }: TextPageProps) {
-    // 检测内容中是否包含地图占位符，或者如果是 misc 页面
-    const hasMap = slug === 'misc' || content.includes('<div id="chartdiv"></div>') || content.includes('id="chartdiv"');
-    
+export default function TextPage({ config, content, embedded = false, slug, footprintPoints }: TextPageProps) {
+    const [showFootprints, setShowFootprints] = useState(false);
+    const [atlasClicks, setAtlasClicks] = useState(0);
+
     // 移除地图相关的 script 标签和占位符，因为我们会用 React 组件替代
     const cleanedContent = content
         .replace(/<script[^>]*src="https:\/\/cdn\.amcharts\.com[^"]*"[^>]*><\/script>/g, '')
@@ -81,8 +84,23 @@ export default function TextPage({ config, content, embedded = false, slug }: Te
                 {/* 如果是 misc 页面，在内容后渲染地图 */}
                 {slug === 'misc' && (
                     <div className="mt-8">
-                        <h1 className="text-3xl font-serif font-bold text-primary mt-8 mb-4">🌏 Footprints Map</h1>
-                        <AmChartsMap />
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setAtlasClicks((current) => {
+                                    const next = current + 1;
+                                    if (next >= 3) setShowFootprints(true);
+                                    return next >= 3 ? 0 : next;
+                                });
+                            }}
+                            className="block text-left text-3xl font-serif font-bold text-primary mt-8 mb-4"
+                            aria-label="Atlas"
+                        >
+                            🗺️ Atlas 👀...
+                        </button>
+                        {showFootprints && (
+                            <AmChartsMap points={footprintPoints} />
+                        )}
                     </div>
                 )}
             </div>
