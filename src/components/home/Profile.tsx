@@ -31,13 +31,13 @@ const VISITOR_GLOBE_SRC =
     'https://mapmyvisitors.com/globe.js?d=-BWnH7O41AjBdrDoY4JAJqBxHOf9ymPoECzpb8wcKwc';
 
 function ClustrMapsWidget() {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const widgetHostRef = useRef<HTMLDivElement>(null);
     const scriptInjectedRef = useRef(false);
     const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
 
     useEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
+        const widgetHost = widgetHostRef.current;
+        if (!widgetHost) return;
 
         let mutationObserver: MutationObserver | null = null;
         let timeoutId: number | null = null;
@@ -52,18 +52,77 @@ function ClustrMapsWidget() {
             setStatus('loaded');
         };
 
+        const ensureAnimationStyles = () => {
+            if (widgetHost.querySelector('#mmvst-prism-animation-style')) return;
+
+            const style = document.createElement('style');
+            style.id = 'mmvst-prism-animation-style';
+            style.textContent = `
+                @keyframes prism-mmvst-spin-front {
+                    from { transform: translateX(-25%); }
+                    to { transform: translateX(0); }
+                }
+                @keyframes prism-mmvst-spin-back {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(-25%); }
+                }
+                .mmvst_inner {
+                    display: block !important;
+                }
+                .mmvst_globe {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                    transform: scale(1) !important;
+                }
+                .mmvst_map_f,
+                .mmvst_dots {
+                    animation: prism-mmvst-spin-front 12s linear infinite !important;
+                    will-change: transform;
+                }
+                .mmvst_map_b {
+                    animation: prism-mmvst-spin-back 12s linear infinite !important;
+                    will-change: transform;
+                }
+                @media (max-width: 640px) {
+                    .mmvst_outer {
+                        max-width: 180px !important;
+                        height: 190px !important;
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+                    }
+                    .mmvst_inner {
+                        transform: scale(0.86) !important;
+                        transform-origin: top center !important;
+                    }
+                }
+            `;
+            widgetHost.appendChild(style);
+        };
+
+        const resumeWidgetAnimation = () => {
+            ensureAnimationStyles();
+            widgetHost
+                .querySelectorAll<HTMLElement>('.mmvst_map_f, .mmvst_map_b, .mmvst_dots')
+                .forEach((element) => {
+                    element.style.animation = 'none';
+                    void element.offsetWidth;
+                    element.style.animation = '';
+                });
+        };
+
         const revealWidget = () => {
-            const widget = container.querySelector<HTMLElement>('.mmvst_outer');
-            const inner = container.querySelector<HTMLElement>('.mmvst_inner');
+            const widget = widgetHost.querySelector<HTMLElement>('.mmvst_outer');
+            const inner = widgetHost.querySelector<HTMLElement>('.mmvst_inner');
             if (!widget || !inner) return false;
 
             inner.style.display = 'block';
-            const globe = container.querySelector<HTMLElement>('.mmvst_globe');
+            const globe = widgetHost.querySelector<HTMLElement>('.mmvst_globe');
             if (globe) {
                 globe.style.visibility = 'visible';
                 globe.style.opacity = '1';
                 globe.style.transform = 'scale(1)';
             }
+            resumeWidgetAnimation();
             finishLoading();
             return true;
         };
@@ -71,7 +130,7 @@ function ClustrMapsWidget() {
         mutationObserver = new MutationObserver(() => {
             revealWidget();
         });
-        mutationObserver.observe(container, { childList: true, subtree: true });
+        mutationObserver.observe(widgetHost, { childList: true, subtree: true });
 
         if (!scriptInjectedRef.current) {
             scriptInjectedRef.current = true;
@@ -83,17 +142,30 @@ function ClustrMapsWidget() {
                 setStatus('error');
                 mutationObserver?.disconnect();
             };
-            container.appendChild(script);
+            widgetHost.appendChild(script);
         }
 
         timeoutId = window.setTimeout(() => {
             if (!revealWidget()) setStatus('error');
         }, 12000);
 
+        const handleRestore = () => {
+            window.setTimeout(() => {
+                revealWidget();
+            }, 100);
+        };
+
+        document.addEventListener('visibilitychange', handleRestore);
+        window.addEventListener('focus', handleRestore);
+        window.addEventListener('hashchange', handleRestore);
+
         return () => {
+            document.removeEventListener('visibilitychange', handleRestore);
+            window.removeEventListener('focus', handleRestore);
+            window.removeEventListener('hashchange', handleRestore);
             mutationObserver?.disconnect();
             if (timeoutId !== null) window.clearTimeout(timeoutId);
-            container.innerHTML = '';
+            widgetHost.innerHTML = '';
             scriptInjectedRef.current = false;
         };
     }, []);
@@ -102,10 +174,10 @@ function ClustrMapsWidget() {
         <div className="mb-6">
             <h3 className="font-semibold text-primary mb-3 text-center text-sm">Visitors</h3>
             <div
-                ref={containerRef}
                 className="relative overflow-visible rounded-lg flex items-center justify-center"
-                style={{ minHeight: '250px', width: '100%', textAlign: 'center' }}
+                style={{ minHeight: 'clamp(190px, 50vw, 250px)', width: '100%', textAlign: 'center' }}
             >
+                <div ref={widgetHostRef} className="w-full max-w-[220px] sm:max-w-none flex items-center justify-center mx-auto" />
                 {status === 'loading' && (
                     <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                         <div className="w-10 h-10 rounded-full border-2 border-neutral-200 dark:border-neutral-700 border-t-accent animate-spin" />
