@@ -23,13 +23,25 @@ export default function SelectedPublications({ publications, title = 'Selected P
         <section className="animate-fade-in">
             <div className="flex items-center justify-between mb-4">
                 <h2 className="text-2xl font-serif font-bold text-primary">{title}</h2>
-                <Link
-                    href={enableOnePageMode ? "/#publications" : "/publications"}
-                    prefetch={true}
-                    className="text-accent hover:text-accent-dark text-sm font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
-                >
-                    View All →
-                </Link>
+                {enableOnePageMode ? (
+                    // Native in-page anchor: reliably scrolls to the #publications section
+                    // (respects scroll-mt / scroll-smooth) without next/link's same-page
+                    // hash quirk, and avoids basePath prefixing issues.
+                    <a
+                        href="#publications"
+                        className="text-accent hover:text-accent-dark text-sm font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                    >
+                        View All →
+                    </a>
+                ) : (
+                    <Link
+                        href="/publications"
+                        prefetch={true}
+                        className="text-accent hover:text-accent-dark text-sm font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                    >
+                        View All →
+                    </Link>
+                )}
             </div>
             <div className="space-y-4">
                 {publications.map((pub, index) => (

@@ -174,7 +174,7 @@ export default function Home() {
                         key={section.id}
                         publications={section.publications || []}
                         title={section.title}
-                        enableOnePageMode={true}
+                        enableOnePageMode={enableOnePageMode}
                       />
                     );
                   case 'list':
