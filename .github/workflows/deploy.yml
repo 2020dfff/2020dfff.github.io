@@ -4,7 +4,7 @@ name: Deploy to GitHub Pages
 # Triggered on pushes to the `prism` branch, or manually from the Actions tab.
 on:
   push:
-    branches: [prism]
+    branches: [main]
   workflow_dispatch:
 
 # Allow this workflow to publish to GitHub Pages.
