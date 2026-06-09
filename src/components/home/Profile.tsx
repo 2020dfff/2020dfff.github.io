@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { withBasePath } from '@/lib/basePath';
 import {
@@ -14,195 +14,38 @@ import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Github, Linkedin, Pin } from 'lucide-react';
 import { SiteConfig } from '@/lib/config';
 
-// Visitor globe widget (real visitor map).
-// ClustrMaps rebranded to MapMyVisitors and let clustrmaps.com lapse (its DNS now
-// fails globally), which is why the old embed stopped rendering. The same widget —
-// and its full visitor history — lives on mapmyvisitors.com under the same token.
-// globe.js locates itself by looking for a <script id="mmvst_globe"> in the page
-// and inserts the widget after it. It also waits for window.load before showing the
-// globe; in React that event has often already fired, so we reveal the inserted DOM
-// once it appears instead of leaving the widget hidden forever.
-// Current widget: new MapMyVisitors account (yfei11@u.nus.edu), counting from 2026-06.
-// Old ClustrMaps token kept for reference in case its pre-migration history is ever
-// recoverable — clustrmaps.com's DNS is dead and the token returns no data on
-// mapmyvisitors.com, so its records appear lost:
-//   d=-n9Eut7dB_Iba4p2ddfdKBAfzRvd1G0iPDLEYq85aAY
-const VISITOR_GLOBE_SRC =
-    'https://mapmyvisitors.com/globe.js?d=-BWnH7O41AjBdrDoY4JAJqBxHOf9ymPoECzpb8wcKwc';
-
-// The globe is for display only — its JS/cookie-based counting is blocked by modern
-// browser tracking prevention, so it records almost nothing. The map widget's image
-// pixel counts server-side (by request, no cookie needed), so we fire it once per load
-// to actually register the visit on the dashboard. Same project, different token.
-const VISITOR_COUNT_PIXEL =
-    'https://mapmyvisitors.com/map.png?d=-nEGFcrT3lBvdQpfAmpyEUP0MhQzB6pgIuSH8AUU-Os&cl=ffffff';
+// Visitor map (MapMyVisitors). The fancy globe renders but its dot-data feed is broken
+// server-side, and its JS/cookie-based counting is blocked by modern browser tracking
+// prevention. So we use the map-image widget: a single <img> that shows real visitor
+// dots AND registers the visit server-side on load (no cookies) — the only reliable way
+// to both display dots and count.
+// (Old, likely-lost tokens — clustrmaps globe: -n9Eut7dB_… ; mapmyvisitors globe: -BWnH7O41…)
+const VISITOR_MAP_SRC =
+    'https://mapmyvisitors.com/map.png?d=-nEGFcrT3lBvdQpfAmpyEUP0MhQzB6pgIuSH8AUU-Os&cl=ffffff&w=400';
+const VISITOR_STATS_URL = 'https://mapmyvisitors.com/web/1c4yk';
 
 function ClustrMapsWidget() {
-    const widgetHostRef = useRef<HTMLDivElement>(null);
-    const scriptInjectedRef = useRef(false);
-    const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
-
-    useEffect(() => {
-        const widgetHost = widgetHostRef.current;
-        if (!widgetHost) return;
-
-        let mutationObserver: MutationObserver | null = null;
-        let timeoutId: number | null = null;
-
-        const finishLoading = () => {
-            if (timeoutId !== null) {
-                window.clearTimeout(timeoutId);
-                timeoutId = null;
-            }
-            mutationObserver?.disconnect();
-            mutationObserver = null;
-            setStatus('loaded');
-        };
-
-        const ensureAnimationStyles = () => {
-            if (widgetHost.querySelector('#mmvst-prism-animation-style')) return;
-
-            const style = document.createElement('style');
-            style.id = 'mmvst-prism-animation-style';
-            style.textContent = `
-                @keyframes prism-mmvst-spin-front {
-                    from { transform: translateX(-25%); }
-                    to { transform: translateX(0); }
-                }
-                @keyframes prism-mmvst-spin-back {
-                    from { transform: translateX(0); }
-                    to { transform: translateX(-25%); }
-                }
-                .mmvst_inner {
-                    display: block !important;
-                }
-                .mmvst_globe {
-                    visibility: visible !important;
-                    opacity: 1 !important;
-                    transform: scale(1) !important;
-                }
-                .mmvst_map_f,
-                .mmvst_dots {
-                    animation: prism-mmvst-spin-front 12s linear infinite !important;
-                    will-change: transform;
-                }
-                .mmvst_map_b {
-                    animation: prism-mmvst-spin-back 12s linear infinite !important;
-                    will-change: transform;
-                }
-                @media (max-width: 640px) {
-                    .mmvst_outer {
-                        max-width: 180px !important;
-                        height: 190px !important;
-                        margin-left: auto !important;
-                        margin-right: auto !important;
-                    }
-                    .mmvst_inner {
-                        transform: scale(0.86) !important;
-                        transform-origin: top center !important;
-                    }
-                }
-            `;
-            widgetHost.appendChild(style);
-        };
-
-        const resumeWidgetAnimation = () => {
-            ensureAnimationStyles();
-            widgetHost
-                .querySelectorAll<HTMLElement>('.mmvst_map_f, .mmvst_map_b, .mmvst_dots')
-                .forEach((element) => {
-                    element.style.animation = 'none';
-                    void element.offsetWidth;
-                    element.style.animation = '';
-                });
-        };
-
-        const revealWidget = () => {
-            const widget = widgetHost.querySelector<HTMLElement>('.mmvst_outer');
-            const inner = widgetHost.querySelector<HTMLElement>('.mmvst_inner');
-            if (!widget || !inner) return false;
-
-            inner.style.display = 'block';
-            const globe = widgetHost.querySelector<HTMLElement>('.mmvst_globe');
-            if (globe) {
-                globe.style.visibility = 'visible';
-                globe.style.opacity = '1';
-                globe.style.transform = 'scale(1)';
-            }
-            resumeWidgetAnimation();
-            finishLoading();
-            return true;
-        };
-
-        mutationObserver = new MutationObserver(() => {
-            revealWidget();
-        });
-        mutationObserver.observe(widgetHost, { childList: true, subtree: true });
-
-        if (!scriptInjectedRef.current) {
-            scriptInjectedRef.current = true;
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.id = 'mmvst_globe';
-            script.src = VISITOR_GLOBE_SRC;
-            script.onerror = () => {
-                setStatus('error');
-                mutationObserver?.disconnect();
-            };
-            widgetHost.appendChild(script);
-
-            // Fire the map-pixel counter once (cache-busted) so the visit is recorded.
-            const counter = new Image();
-            counter.src = `${VISITOR_COUNT_PIXEL}&t=${Date.now()}`;
-        }
-
-        timeoutId = window.setTimeout(() => {
-            if (!revealWidget()) setStatus('error');
-        }, 12000);
-
-        const handleRestore = () => {
-            window.setTimeout(() => {
-                revealWidget();
-            }, 100);
-        };
-
-        document.addEventListener('visibilitychange', handleRestore);
-        window.addEventListener('focus', handleRestore);
-        window.addEventListener('hashchange', handleRestore);
-
-        return () => {
-            document.removeEventListener('visibilitychange', handleRestore);
-            window.removeEventListener('focus', handleRestore);
-            window.removeEventListener('hashchange', handleRestore);
-            mutationObserver?.disconnect();
-            if (timeoutId !== null) window.clearTimeout(timeoutId);
-            widgetHost.innerHTML = '';
-            scriptInjectedRef.current = false;
-        };
-    }, []);
-
     return (
         <div className="mb-6">
             <h3 className="font-semibold text-primary mb-3 text-center text-sm">Visitors</h3>
-            <div
-                className="relative overflow-visible rounded-lg flex items-center justify-center"
-                style={{ minHeight: 'clamp(190px, 50vw, 250px)', width: '100%', textAlign: 'center' }}
+            <a
+                href={VISITOR_STATS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visitor map"
+                className="block overflow-hidden rounded-lg shadow-sm"
             >
-                <div ref={widgetHostRef} className="w-full max-w-[220px] sm:max-w-none flex items-center justify-center mx-auto" />
-                {status === 'loading' && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                        <div className="w-10 h-10 rounded-full border-2 border-neutral-200 dark:border-neutral-700 border-t-accent animate-spin" />
-                        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Loading visitor map…</p>
-                    </div>
-                )}
-                {status === 'error' && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                        <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                            Visitor map is temporarily unavailable.
-                        </p>
-                    </div>
-                )}
-            </div>
+                {/* Loading this image both displays the visitor dots and records the visit. */}
+                <img
+                    src={VISITOR_MAP_SRC}
+                    alt="Map of recent visitors"
+                    width={400}
+                    height={221}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="block w-full h-auto"
+                />
+            </a>
         </div>
     );
 }
