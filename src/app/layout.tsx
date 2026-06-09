@@ -40,6 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        {/* Send the full URL (incl. /~yfei11 path) as Referer so the MapMyVisitors
+            widget can attribute hits to this page (default strict-origin strips the path). */}
+        <meta name="referrer" content="no-referrer-when-downgrade" />
         <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${config.site.favicon}`} type="image/svg+xml" />
         {/* Warm up the MapMyVisitors connection on page load so the visitor globe's
             heavy script + assets load with minimal delay once it scrolls into view. */}
