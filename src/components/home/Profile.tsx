@@ -30,6 +30,13 @@ import { SiteConfig } from '@/lib/config';
 const VISITOR_GLOBE_SRC =
     'https://mapmyvisitors.com/globe.js?d=-BWnH7O41AjBdrDoY4JAJqBxHOf9ymPoECzpb8wcKwc';
 
+// The globe is for display only — its JS/cookie-based counting is blocked by modern
+// browser tracking prevention, so it records almost nothing. The map widget's image
+// pixel counts server-side (by request, no cookie needed), so we fire it once per load
+// to actually register the visit on the dashboard. Same project, different token.
+const VISITOR_COUNT_PIXEL =
+    'https://mapmyvisitors.com/map.png?d=-nEGFcrT3lBvdQpfAmpyEUP0MhQzB6pgIuSH8AUU-Os&cl=ffffff';
+
 function ClustrMapsWidget() {
     const widgetHostRef = useRef<HTMLDivElement>(null);
     const scriptInjectedRef = useRef(false);
@@ -143,6 +150,10 @@ function ClustrMapsWidget() {
                 mutationObserver?.disconnect();
             };
             widgetHost.appendChild(script);
+
+            // Fire the map-pixel counter once (cache-busted) so the visit is recorded.
+            const counter = new Image();
+            counter.src = `${VISITOR_COUNT_PIXEL}&t=${Date.now()}`;
         }
 
         timeoutId = window.setTimeout(() => {
