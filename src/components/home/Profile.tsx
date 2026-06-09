@@ -24,6 +24,25 @@ const VISITOR_MAP_SRC =
     'https://mapmyvisitors.com/map.png?d=-nEGFcrT3lBvdQpfAmpyEUP0MhQzB6pgIuSH8AUU-Os&cl=ffffff&w=400';
 const VISITOR_STATS_URL = 'https://mapmyvisitors.com/web/1c4yk';
 
+// ── Reference: how to show the spinning GLOBE instead of this flat map ───────────
+// Kept because it took a lot of debugging. Full working implementation: git 15469b1.
+// The globe (globe.js?d=-BWnH7O41…) renders, but two things make it impractical:
+//   (a) its dot-data feed is broken server-side (globe_call_home returns the website
+//       HTML, not JSONP), so it shows no real visitor dots; and
+//   (b) it binds reveal + rotation to $(window).load, which in a React SPA has usually
+//       already fired, leaving the globe hidden and static.
+// The fix that made it render AND spin:
+//   1. Inject <script id="mmvst_globe" src={globe.js}> into a host <div>.
+//   2. MutationObserver on the host → when ".mmvst_inner" appears, set display:block
+//      (globe.js's own load-handler never runs, so reveal it manually).
+//   3. Drive rotation with our own CSS keyframes (Velocity never starts):
+//        @keyframes spin-front { from{transform:translateX(-25%)} to{transform:translateX(0)} }
+//        @keyframes spin-back  { from{transform:translateX(0)}    to{transform:translateX(-25%)} }
+//        .mmvst_map_f,.mmvst_dots { animation: spin-front 12s linear infinite }
+//        .mmvst_map_b             { animation: spin-back  12s linear infinite }
+// Even then, counting must come from the map.png pixel (cookie-based globe counting is
+// blocked by modern browsers) — so the map below is what reliably both shows dots and counts.
+// ─────────────────────────────────────────────────────────────────────────────────
 function ClustrMapsWidget() {
     return (
         <div className="mb-6">
