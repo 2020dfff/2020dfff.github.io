@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
@@ -20,14 +20,15 @@ interface TextPageProps {
 
 export default function TextPage({ config, content, embedded = false, slug, footprintPoints }: TextPageProps) {
     const [showFootprints, setShowFootprints] = useState(false);
-    const [atlasClicks, setAtlasClicks] = useState(0);
+    const atlasClickCountRef = useRef(0);
 
-    // Reveal the footprints map after 3 clicks on the Atlas heading (easter egg).
-    // Counting happens in a pure state updater; the reveal is handled here as an
-    // effect (calling setState inside another setState's updater is unreliable).
-    useEffect(() => {
-        if (atlasClicks >= 3) setShowFootprints(true);
-    }, [atlasClicks]);
+    const handleAtlasClick = () => {
+        atlasClickCountRef.current += 1;
+        if (atlasClickCountRef.current >= 3) {
+            atlasClickCountRef.current = 0;
+            setShowFootprints(true);
+        }
+    };
 
     // 移除地图相关的 script 标签和占位符，因为我们会用 React 组件替代
     const cleanedContent = content
@@ -93,7 +94,7 @@ export default function TextPage({ config, content, embedded = false, slug, foot
                     <div className="mt-8">
                         <button
                             type="button"
-                            onClick={() => setAtlasClicks((c) => c + 1)}
+                            onClick={handleAtlasClick}
                             className="block text-left text-3xl font-serif font-bold text-primary mt-8 mb-4"
                             aria-label="Atlas"
                         >
