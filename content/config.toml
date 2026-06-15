@@ -1,14 +1,14 @@
 [site]
 title = "Yang Fei (费扬)"
 description = "PhD student at NUS. Coding for Something... Or Nothing."
-favicon = "/fy_bio.jpg"
+favicon = "/fy_favicon.png"
 last_updated = "June 1, 2026"
 
 [author]
 name = "Yang Fei"
 title = "1st-year PhD"
 institution = "National University of Singapore"
-avatar = "/fy_bio.jpg"
+avatar = "/fy_avatar.jpg"
 
 [social]
 # Contact information (leave blank or delete to hide)
