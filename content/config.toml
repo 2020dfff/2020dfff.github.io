@@ -33,6 +33,22 @@ enable_likes = true
 # Display all subpages on a single page
 enable_one_page_mode = false
 
+[comments]
+# giscus comment widget (GitHub Discussions). One-time setup:
+#   1. Repo must be public (it is).
+#   2. Enable Discussions: repo Settings → General → Features → check "Discussions".
+#   3. Install the giscus app and grant it this repo: https://github.com/apps/giscus
+#   4. Open https://giscus.app, enter repo "2020dfff/2020dfff.github.io", pick a category
+#      (e.g. "General"), then copy the generated data-repo-id and data-category-id below.
+# Comments stay hidden until both IDs are filled in.
+enabled = true
+repo = "2020dfff/2020dfff.github.io"
+repo_id = ""
+category = "General"
+category_id = ""
+mapping = "pathname"
+lang = "en"
+
 [[navigation]]
 title = "About"
 type = "page"

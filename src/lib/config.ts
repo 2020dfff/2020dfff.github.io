@@ -30,6 +30,15 @@ export interface SiteConfig {
         enable_likes: boolean;
         enable_one_page_mode?: boolean;
     };
+    comments?: {
+        enabled?: boolean;
+        repo: string;
+        repo_id: string;
+        category: string;
+        category_id: string;
+        mapping?: string;
+        lang?: string;
+    };
     navigation: Array<{
         title: string;
         type: 'section' | 'page' | 'link';
