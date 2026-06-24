@@ -43,9 +43,9 @@ enable_one_page_mode = false
 # Comments stay hidden until both IDs are filled in.
 enabled = true
 repo = "2020dfff/2020dfff.github.io"
-repo_id = ""
+repo_id = "R_kgDOHSnl4A"
 category = "General"
-category_id = ""
+category_id = "DIC_kwDOHSnl4M4C_yJr"
 mapping = "pathname"
 lang = "en"
 

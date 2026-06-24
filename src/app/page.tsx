@@ -8,7 +8,6 @@ import News, { NewsItem } from '@/components/home/News';
 import PublicationsList from '@/components/publications/PublicationsList';
 import TextPage from '@/components/pages/TextPage';
 import CardPage from '@/components/pages/CardPage';
-import Giscus from '@/components/ui/Giscus';
 
 import { Publication } from '@/types/publication';
 import { BasePageConfig, PublicationPageConfig, TextPageConfig, CardPageConfig } from '@/types/page';
@@ -245,20 +244,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {config.comments?.enabled && config.comments.repo_id && config.comments.category_id && (
-        <div className="mt-12 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-serif font-bold text-primary mb-4">Comments</h2>
-          <Giscus
-            repo={config.comments.repo}
-            repo_id={config.comments.repo_id}
-            category={config.comments.category}
-            category_id={config.comments.category_id}
-            mapping={config.comments.mapping}
-            lang={config.comments.lang}
-          />
-        </div>
-      )}
     </div>
   );
 }

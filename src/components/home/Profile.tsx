@@ -88,38 +88,48 @@ interface ProfileProps {
     researchInterests?: string[];
 }
 
+// Global like counter (abacus — free, tokenless). localStorage stops the same device
+// from counting twice; the button degrades gracefully if the counter API is unreachable.
+const LIKE_COUNTER_NS = '2020dfff-github-io';
+const LIKE_COUNTER_KEY = 'profile-likes';
+const LIKE_GET_URL = `https://abacus.jasoncameron.dev/get/${LIKE_COUNTER_NS}/${LIKE_COUNTER_KEY}`;
+const LIKE_HIT_URL = `https://abacus.jasoncameron.dev/hit/${LIKE_COUNTER_NS}/${LIKE_COUNTER_KEY}`;
+
 export default function Profile({ author, social, features, researchInterests }: ProfileProps) {
 
     const [hasLiked, setHasLiked] = useState(false);
     const [showThanks, setShowThanks] = useState(false);
+    const [likeCount, setLikeCount] = useState<number | null>(null);
     const [showAddress, setShowAddress] = useState(false);
     const [isAddressPinned, setIsAddressPinned] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
     const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
 
-    // Check local storage for user's like status
+    // On mount: read this device's like status + fetch the global like count.
     useEffect(() => {
         if (!features.enable_likes) return;
-
-        const userHasLiked = localStorage.getItem('yangfei-website-user-liked');
-        if (userHasLiked === 'true') {
-            setHasLiked(true);
-        }
+        setHasLiked(localStorage.getItem('yangfei-website-user-liked') === 'true');
+        fetch(LIKE_GET_URL)
+            .then((r) => r.json())
+            .then((d) => { if (typeof d?.value === 'number') setLikeCount(d.value); })
+            .catch(() => { /* counter offline — just hide the number */ });
     }, [features.enable_likes]);
 
+    // One like per device; increments the shared global count. No "unlike" because the
+    // global tally can't be decremented.
     const handleLike = () => {
-        const newLikedState = !hasLiked;
-        setHasLiked(newLikedState);
+        setShowThanks(true);
+        setTimeout(() => setShowThanks(false), 2000);
+        if (hasLiked) return;
 
-        if (newLikedState) {
-            localStorage.setItem('yangfei-website-user-liked', 'true');
-            setShowThanks(true);
-            setTimeout(() => setShowThanks(false), 2000);
-        } else {
-            localStorage.removeItem('yangfei-website-user-liked');
-            setShowThanks(false);
-        }
+        setHasLiked(true);
+        localStorage.setItem('yangfei-website-user-liked', 'true');
+        setLikeCount((c) => (c == null ? c : c + 1)); // optimistic bump
+        fetch(LIKE_HIT_URL)
+            .then((r) => r.json())
+            .then((d) => { if (typeof d?.value === 'number') setLikeCount(d.value); })
+            .catch(() => { /* keep optimistic value */ });
     };
 
     const socialLinks = [
@@ -387,6 +397,9 @@ export default function Profile({ author, social, features, researchInterests }:
                                 <HeartIcon className="h-4 w-4" />
                             )}
                             <span>{hasLiked ? 'Liked' : 'Like'}</span>
+                            {likeCount !== null && (
+                                <span className="tabular-nums opacity-80">{likeCount}</span>
+                            )}
                         </motion.button>
 
                         {/* Thanks bubble */}
