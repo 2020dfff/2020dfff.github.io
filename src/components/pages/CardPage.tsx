@@ -66,6 +66,37 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                                     {item.subtitle && (
                                         <p className={`${embedded ? "text-sm" : "text-base"} text-accent font-medium mb-3`}>{item.subtitle}</p>
                                     )}
+                                    {item.roles && item.roles.length > 0 && (
+                                        <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
+                                            {item.roles.map((role, roleIndex) => (
+                                                <div
+                                                    key={`${role.title}-${role.date || roleIndex}`}
+                                                    className={`${roleIndex === 0 ? "pt-1" : "pt-4"} pb-4 last:pb-0`}
+                                                >
+                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-1">
+                                                        <h4 className={`${embedded ? "text-base" : "text-lg"} font-semibold text-primary leading-tight`}>
+                                                            {role.title}
+                                                        </h4>
+                                                        {role.date && (
+                                                            <span className="shrink-0 text-sm text-neutral-500 font-medium">
+                                                                {role.date}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                    {role.subtitle && (
+                                                        <p className={`${embedded ? "text-sm" : "text-base"} text-accent font-medium mb-2`}>
+                                                            {role.subtitle}
+                                                        </p>
+                                                    )}
+                                                    {role.content && (
+                                                        <p className={`${embedded ? "text-sm" : "text-base"} text-neutral-600 dark:text-neutral-500 leading-relaxed`}>
+                                                            {role.content}
+                                                        </p>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
                                     {item.content && (
                                         <div className={`${embedded ? "text-sm" : "text-base"} text-neutral-600 dark:text-neutral-500 leading-relaxed space-y-1`}>
                                             {item.content.split('\n').map((line, lineIndex) => (

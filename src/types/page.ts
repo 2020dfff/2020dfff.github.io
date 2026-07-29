@@ -24,6 +24,14 @@ export interface CardItem {
     image?: string;
     logo?: string;
     logoText?: string;
+    roles?: CardRole[];
+}
+
+export interface CardRole {
+    title: string;
+    subtitle?: string;
+    date?: string;
+    content?: string;
 }
 
 export interface CardPageConfig extends BasePageConfig {

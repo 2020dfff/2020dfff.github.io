@@ -3,13 +3,6 @@ title = "Internships"
 description = "My internship experiences"
 
 [[items]]
-title = "Huawei Singapore Research Center"
-subtitle = "Research Intern"
-date = "Sep 2025 - Dec 2025"
-content = "Explored generative recommendation for online advertising in HUAWEI AppGallery, developing long-sequence models inspired by ByteDance's LONGER framework and Huawei's FuXi architecture."
-logo = "/images/huawei-logo.svg"
-
-[[items]]
 title = "Shanghai Artificial Intelligence Laboratory"
 subtitle = "AI Researcher"
 date = "Jun 2024 - Dec 2024"
@@ -17,8 +10,17 @@ content = "Conduct research on AI Application in Urban Computing fields like tra
 logo = "/images/ailab-logo.png"
 
 [[items]]
-title = "HUAWEI ICT Department, Shanghai"
+title = "HUAWEI"
+logo = "/images/huawei-logo.svg"
+
+[[items.roles]]
+title = "Singapore Research Center"
+subtitle = "Research Intern"
+date = "Sep 2025 - Dec 2025"
+content = "Explored generative recommendation for online advertising in HUAWEI AppGallery, developing long-sequence models inspired by ByteDance's LONGER framework and Huawei's FuXi architecture."
+
+[[items.roles]]
+title = "ICT Department, Shanghai"
 subtitle = "Software Development Engineer"
 date = "Aug 2022 - Oct 2022"
 content = "Interned in packet core network department, ddb group, focus on distributed database microservices built on cloud core. Provide a full range of core network software, help operators build an agile and reliable core network. Build DDB micro-service based on Go Cell framework, realize synchronous data processing."
-logo = "/images/huawei-logo.svg"
