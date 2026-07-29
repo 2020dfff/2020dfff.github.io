@@ -45,6 +45,7 @@ export interface Publication {
   previewUrl?: string;
   thumbnailUrl?: string;
   badge?: string;
+  badgeYear?: number;
   summary?: string;
   researchArea: ResearchArea;
   description?: string;

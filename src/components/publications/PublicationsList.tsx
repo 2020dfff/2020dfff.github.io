@@ -220,7 +220,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                                         ) : (
                                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-accent/10 via-neutral-50 to-neutral-100 dark:from-accent/15 dark:via-neutral-800 dark:to-neutral-900">
                                                 <span className="text-2xl font-serif font-bold text-accent">{getPublicationBadge(pub)}</span>
-                                                <span className="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">{pub.year}</span>
+                                                <span className="mt-1 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">{pub.badgeYear || pub.year}</span>
                                             </div>
                                         )}
                                     </div>

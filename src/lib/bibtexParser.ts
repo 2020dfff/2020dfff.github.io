@@ -90,9 +90,10 @@ export function parseBibTeX(bibtexContent: string): Publication[] {
       previewUrl: cleanBibTeXString(previewUrl) || undefined,
       thumbnailUrl: cleanBibTeXString(tags.thumbnailurl || tags.thumbnailUrl) || undefined,
       badge: cleanBibTeXString(tags.badge) || undefined,
+      badgeYear: parseInt(tags.badgeyear || tags.badgeYear) || undefined,
       
       // Store original BibTeX (excluding custom fields)
-      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'previewurl', 'thumbnailurl', 'figureurl', 'badge', 'description', 'keywords', 'code']),
+      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'previewurl', 'thumbnailurl', 'figureurl', 'badge', 'badgeyear', 'description', 'keywords', 'code']),
     };
     
     // Clean up undefined fields
