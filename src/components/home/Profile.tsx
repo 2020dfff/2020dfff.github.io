@@ -13,61 +13,7 @@ import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Github, Linkedin, Pin } from 'lucide-react';
 import { SiteConfig } from '@/lib/config';
-
-// Visitor map (MapMyVisitors). The fancy globe renders but its dot-data feed is broken
-// server-side, and its JS/cookie-based counting is blocked by modern browser tracking
-// prevention. So we use the map-image widget: a single <img> that shows real visitor
-// dots AND registers the visit server-side on load (no cookies) — the only reliable way
-// to both display dots and count.
-// (Old, likely-lost tokens — clustrmaps globe: -n9Eut7dB_… ; mapmyvisitors globe: -BWnH7O41…)
-const VISITOR_MAP_SRC =
-    'https://mapmyvisitors.com/map.png?d=-nEGFcrT3lBvdQpfAmpyEUP0MhQzB6pgIuSH8AUU-Os&cl=ffffff&w=400';
-const VISITOR_STATS_URL = 'https://mapmyvisitors.com/web/1c4yk';
-
-// ── Reference: how to show the spinning GLOBE instead of this flat map ───────────
-// Kept because it took a lot of debugging. Full working implementation: git 15469b1.
-// The globe (globe.js?d=-BWnH7O41…) renders, but two things make it impractical:
-//   (a) its dot-data feed is broken server-side (globe_call_home returns the website
-//       HTML, not JSONP), so it shows no real visitor dots; and
-//   (b) it binds reveal + rotation to $(window).load, which in a React SPA has usually
-//       already fired, leaving the globe hidden and static.
-// The fix that made it render AND spin:
-//   1. Inject <script id="mmvst_globe" src={globe.js}> into a host <div>.
-//   2. MutationObserver on the host → when ".mmvst_inner" appears, set display:block
-//      (globe.js's own load-handler never runs, so reveal it manually).
-//   3. Drive rotation with our own CSS keyframes (Velocity never starts):
-//        @keyframes spin-front { from{transform:translateX(-25%)} to{transform:translateX(0)} }
-//        @keyframes spin-back  { from{transform:translateX(0)}    to{transform:translateX(-25%)} }
-//        .mmvst_map_f,.mmvst_dots { animation: spin-front 12s linear infinite }
-//        .mmvst_map_b             { animation: spin-back  12s linear infinite }
-// Even then, counting must come from the map.png pixel (cookie-based globe counting is
-// blocked by modern browsers) — so the map below is what reliably both shows dots and counts.
-// ─────────────────────────────────────────────────────────────────────────────────
-function ClustrMapsWidget() {
-    return (
-        <div className="mb-6">
-            <h3 className="font-semibold text-primary mb-3 text-center text-sm">Visitors</h3>
-            <a
-                href={VISITOR_STATS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Visitor map"
-                className="block overflow-hidden rounded-lg shadow-sm"
-            >
-                {/* Loading this image both displays the visitor dots and records the visit. */}
-                <img
-                    src={VISITOR_MAP_SRC}
-                    alt="Map of recent visitors"
-                    width={400}
-                    height={221}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="block w-full h-auto"
-                />
-            </a>
-        </div>
-    );
-}
+import UmamiVisitorsMap from './UmamiVisitorsMap';
 
 // Custom ORCID icon component
 const OrcidIcon = ({ className }: { className?: string }) => (
@@ -375,8 +321,7 @@ export default function Profile({ author, social, features, researchInterests }:
                 </div>
             )}
 
-            {/* ClustrMaps Visitors Widget */}
-            <ClustrMapsWidget />
+            <UmamiVisitorsMap />
 
             {/* Like Button */}
             {features.enable_likes && (

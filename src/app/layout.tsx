@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -40,14 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        {/* Send the full URL (incl. /~yfei11 path) as Referer so the MapMyVisitors
-            widget can attribute hits to this page (default strict-origin strips the path). */}
-        <meta name="referrer" content="no-referrer-when-downgrade" />
         <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${config.site.favicon}`} type="image/svg+xml" />
-        {/* Warm up the MapMyVisitors connection on page load so the visitor globe's
-            heavy script + assets load with minimal delay once it scrolls into view. */}
-        <link rel="dns-prefetch" href="https://mapmyvisitors.com" />
-        <link rel="preconnect" href="https://mapmyvisitors.com" />
         {/* Speed up font connections */}
         <link rel="dns-prefetch" href="https://google-fonts.jialeliu.com" />
         <link rel="preconnect" href="https://google-fonts.jialeliu.com" crossOrigin="" />
@@ -93,6 +87,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans antialiased`}>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="3f303f39-fb34-41e6-837b-12e8d8d96d51"
+          data-domains="2020dfff.github.io,www.comp.nus.edu.sg"
+          strategy="afterInteractive"
+        />
         <ThemeProvider>
           <Navigation
             items={config.navigation}
