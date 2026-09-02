@@ -45,6 +45,9 @@ export default async function BlogPost({ params }: { params: Promise<{ post: str
         
         // Remove frontmatter if present
         const cleanContent = content.replace(/^---[\s\S]*?---\n/m, '');
+        // Page title from the post's frontmatter title (fallback: first heading, then "Blog").
+        const titleMatch = content.match(/^title:\s*["'](.+)["']/m) || content.match(/^#\s+(.+)/m);
+        const postTitle = titleMatch ? titleMatch[1].trim() : 'Blog';
         const comments = getConfig().comments;
 
         return (
@@ -52,7 +55,7 @@ export default async function BlogPost({ params }: { params: Promise<{ post: str
                 <TextPage
                     config={{
                         type: 'text',
-                        title: 'Blog',
+                        title: postTitle,
                         source: `blog/${post}.md`
                     }}
                     content={cleanContent}

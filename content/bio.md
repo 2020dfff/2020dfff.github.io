@@ -1,4 +1,4 @@
-I am a 1st-year PhD student at [School of Computing](https://www.comp.nus.edu.sg/), National University of Singapore, majoring in Computer Science. Before that I finished my Master Degree also at NUS SoC. I graduated as **Shanghai Outstanding Undergraduate** from Shanghai Jiao Tong University in 2023.06 with a bachelor's degree from the Department of Cyber Science and Engineering, [SEIEE school](https://www.seiee.sjtu.edu.cn/).
+I am a 2nd-year PhD student at [School of Computing](https://www.comp.nus.edu.sg/), National University of Singapore, majoring in Computer Science. Before that I finished my Master Degree also at NUS SoC. I graduated as **Shanghai Outstanding Undergraduate** from Shanghai Jiao Tong University in 2023.06 with a bachelor's degree from the Department of Cyber Science and Engineering, [SEIEE school](https://www.seiee.sjtu.edu.cn/).
 
 I won the **Outstanding Undergraduate Scholarship** of SJTU 3 times in 2020-2022 (Top 15% in SJTU), also won the **Top Cybersecurity Student Scholarship** in the fall of 2022. I won Meritorious Award in 2021 MCM, and was selected as Merit Student in my sophomore year.
 

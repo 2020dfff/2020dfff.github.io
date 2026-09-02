@@ -1,0 +1,39 @@
+# Sveltia CMS configuration.
+# Docs: https://github.com/sveltia/sveltia-cms
+
+backend:
+  name: github
+  repo: 2020dfff/2020dfff.github.io
+  branch: main
+  # GitHub OAuth relay — the sveltia-cms-auth Cloudflare Worker that handles sign-in.
+  base_url: https://sveltia-cms-auth.2019dfff.workers.dev
+
+# Where uploaded images are stored in the repo, and how they're referenced in Markdown.
+media_folder: public/images/blog
+public_folder: /images/blog
+
+# Optional: commit message templates
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: content/blog
+    create: true
+    delete: true
+    extension: md
+    format: yaml-frontmatter
+    slug: "{{fields.slug | default: title}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: excerpt, label: Excerpt (one-line summary), widget: text, required: false }
+      - { name: categories, label: Categories, widget: string, required: false }
+      - { name: tags, label: Tags, widget: string, required: false }
+      - { name: published, label: Published (show on the site), widget: boolean, default: true }
+      - { name: body, label: Body, widget: markdown }
