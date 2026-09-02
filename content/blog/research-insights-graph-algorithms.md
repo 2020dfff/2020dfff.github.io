@@ -1,12 +1,12 @@
 ---
 title: "Research Insights: Recent Advances in Graph Algorithms"
 date: 2025-04-15
+excerpt: A brief overview of recent developments in graph algorithms and their
+  applications in data mining.
 categories: research
 tags: graph-algorithms data-mining research
-excerpt: "A brief overview of recent developments in graph algorithms and their applications in data mining."
 published: true
 ---
-
 # Recent Advances in Graph Algorithms
 
 Graph algorithms continue to play a crucial role in various applications, from social network analysis to recommendation systems. In this post, I'll discuss some of the recent advances in graph algorithms that have caught my attention.
