@@ -1,0 +1,25 @@
+# Pages CMS configuration — https://pagescms.org
+# A hosted, Git-based editor. Sign in at https://app.pagescms.org with GitHub,
+# authorize the Pages CMS app on this repo, and edit the blog below. Saving commits
+# to the repo. Only GitHub accounts with write access (you) can save.
+
+media:
+  input: public/images/blog
+  output: /images/blog
+
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: content/blog
+    view:
+      fields: [title, date, published]
+      sort: [date]
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: date, label: Date, type: date }
+      - { name: excerpt, label: Excerpt (one-line summary), type: text }
+      - { name: categories, label: Categories, type: string }
+      - { name: tags, label: Tags, type: string }
+      - { name: published, label: Published (show on the site), type: boolean, default: true }
+      - { name: body, label: Body, type: rich-text }
