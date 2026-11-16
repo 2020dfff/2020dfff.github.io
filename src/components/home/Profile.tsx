@@ -40,6 +40,12 @@ const LIKE_COUNTER_NS = '2020dfff-github-io';
 const LIKE_COUNTER_KEY = 'profile-likes';
 const LIKE_GET_URL = `https://abacus.jasoncameron.dev/get/${LIKE_COUNTER_NS}/${LIKE_COUNTER_KEY}`;
 const LIKE_HIT_URL = `https://abacus.jasoncameron.dev/hit/${LIKE_COUNTER_NS}/${LIKE_COUNTER_KEY}`;
+// abacus can take several seconds to answer, so show the last count this device saw first.
+const LIKE_COUNT_CACHE_KEY = 'yangfei-website-like-count';
+
+function cacheLikeCount(value: number) {
+    try { localStorage.setItem(LIKE_COUNT_CACHE_KEY, String(value)); } catch { /* storage unavailable */ }
+}
 
 export default function Profile({ author, social, features, researchInterests }: ProfileProps) {
 
@@ -56,9 +62,17 @@ export default function Profile({ author, social, features, researchInterests }:
     useEffect(() => {
         if (!features.enable_likes) return;
         setHasLiked(localStorage.getItem('yangfei-website-user-liked') === 'true');
+        try {
+            const cached = Number(localStorage.getItem(LIKE_COUNT_CACHE_KEY));
+            if (cached > 0) setLikeCount(cached);
+        } catch { /* storage unavailable */ }
         fetch(LIKE_GET_URL)
             .then((r) => r.json())
-            .then((d) => { if (typeof d?.value === 'number') setLikeCount(d.value); })
+            .then((d) => {
+                if (typeof d?.value !== 'number') return;
+                setLikeCount(d.value);
+                cacheLikeCount(d.value);
+            })
             .catch(() => { /* counter offline — just hide the number */ });
     }, [features.enable_likes]);
 
@@ -76,7 +90,11 @@ export default function Profile({ author, social, features, researchInterests }:
         (window as { umami?: { track: (event: string) => void } }).umami?.track('like');
         fetch(LIKE_HIT_URL)
             .then((r) => r.json())
-            .then((d) => { if (typeof d?.value === 'number') setLikeCount(d.value); })
+            .then((d) => {
+                if (typeof d?.value !== 'number') return;
+                setLikeCount(d.value);
+                cacheLikeCount(d.value);
+            })
             .catch(() => { /* keep optimistic value */ });
     };
 
