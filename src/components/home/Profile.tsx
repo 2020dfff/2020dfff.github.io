@@ -72,6 +72,8 @@ export default function Profile({ author, social, features, researchInterests }:
         setHasLiked(true);
         localStorage.setItem('yangfei-website-user-liked', 'true');
         setLikeCount((c) => (c == null ? c : c + 1)); // optimistic bump
+        // Log a "like" event in Umami (country/time only; no-op on localhost or if blocked).
+        (window as { umami?: { track: (event: string) => void } }).umami?.track('like');
         fetch(LIKE_HIT_URL)
             .then((r) => r.json())
             .then((d) => { if (typeof d?.value === 'number') setLikeCount(d.value); })

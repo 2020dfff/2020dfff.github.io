@@ -3,6 +3,11 @@ title = "Awards"
 description = "Honors and awards I have received."
 
 [[items]]
+title = "NUS SoC Research Achievement Award 2026"
+date = "2026-08"
+content = ""
+
+[[items]]
 title = "SJTU Top Cybersecurity Student Scholarship"
 subtitle = "Top 3%"
 date = "2022"

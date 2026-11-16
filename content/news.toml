@@ -1,4 +1,12 @@
 [[news]]
+date = "2026-10"
+content = "🎓 Completed my PhD QE presentation."
+
+[[news]]
+date = "2026-08"
+content = "🏆 Recipient of NUS SoC Research Achievement Award 2026."
+
+[[news]]
 date = "2026-06"
 content = "🎉 Our paper \"Benchmarking Text-to-SQL under RBAC\" was accepted by SIGMOD'27!"
 
